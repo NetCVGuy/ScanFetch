@@ -119,3 +119,4 @@ dotnet publish Gui/ScanFetch.Gui -c Release -r linux-x64 --self-contained true -
 Notes:
 - Building self-contained GUI binaries pulls in native runtime components; ensure corresponding runtime identifiers (`-r`) are supported on your machine and SDK.
 - The GUI project is excluded from the main console project's compile glob, so building the console app doesn't require Avalonia packages unless you build the GUI project explicitly.
+# ScanFetch

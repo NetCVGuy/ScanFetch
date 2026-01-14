@@ -1,0 +1,25 @@
+
+        __
+     __/o \_
+     \____  \
+         /   \
+   __   //\   \
+__/o \-//--\   \_/
+\____  ___  \  |
+     ||   \ |\ |
+    _||   _||_||
+
+    ScanFetch - MORGENSHTERN EDITION
+                                                 
+
+[2026-01-14 03:22:53] [Information] [Program] Запуск ScanFetch...
+[2026-01-14 03:22:53] [Information] [Program] Попытка подключения к 1 сканерам...
+[2026-01-14 03:22:53] [Information] [ScanFetch.Scanners.TcpScanner] Режим сервера: подготовка завершена, слушатель будет запущен в StartListeningAsync
+[2026-01-14 03:22:53] [Information] [ScanFetch.Scanners.TcpScanner] Выбран единственный активный интерфейс enp0s31f6 (192.168.1.12) для прослушивания
+[2026-01-14 03:22:53] [Information] [ScanFetch.Scanners.TcpScanner] TCP сервер запущен и слушает на 192.168.1.12:2002
+[2026-01-14 03:22:53] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме сервера на порту 2002
+[2026-01-14 03:22:53] [Information] [Program] 1 сервер(ов) запущено и слушают, но пока нет активных клиентских подключений.
+[2026-01-14 03:22:58] [Information] [ScanFetch.Scanners.TcpScanner] Клиент подключился (Remote: 192.168.1.10:65130)
+[2026-01-14 03:23:12] [Information] [ScanFetch.Scanners.TcpScanner] Получено на порту 2002: a1
+[2026-01-14 03:23:12] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: a1 (Timestamp: 1768350192)
+[2026-01-14 03:23:12] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Записан файл скана: Scans/2026-01-14_03-23-12-428.txt

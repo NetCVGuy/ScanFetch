@@ -1,0 +1,17 @@
+
+        __
+     __/o \_
+     \____  \
+         /   \
+   __   //\   \
+__/o \-//--\   \_/
+\____  ___  \  |
+     ||   \ |\ |
+    _||   _||_||
+
+    ScanFetch - MORGENSHTERN EDITION
+                                                 
+
+[2026-01-14 02:14:39] [Information] [Program] Запуск ScanFetch...
+[2026-01-14 02:14:39] [Information] [Program] Попытка подключения к 1 сканерам...
+[2026-01-14 02:14:39] [Information] [ScanFetch.Scanners.TcpScanner] TCP сервер слушает на 100.121.34.203:2002 (ожидаю подключение клиента)...

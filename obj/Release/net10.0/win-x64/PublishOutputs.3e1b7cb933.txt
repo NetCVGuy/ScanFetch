@@ -1,0 +1,3 @@
+/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/published/win-x64/ScanFetch.pdb
+/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/published/win-x64/appsettings.json
+/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/published/win-x64/ScanFetch.exe

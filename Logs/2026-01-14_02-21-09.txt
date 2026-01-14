@@ -1,0 +1,21 @@
+
+        __
+     __/o \_
+     \____  \
+         /   \
+   __   //\   \
+__/o \-//--\   \_/
+\____  ___  \  |
+     ||   \ |\ |
+    _||   _||_||
+
+    ScanFetch - MORGENSHTERN EDITION
+                                                 
+
+[2026-01-14 02:21:09] [Information] [Program] Запуск ScanFetch...
+[2026-01-14 02:21:09] [Information] [Program] Попытка подключения к 1 сканерам...
+[2026-01-14 02:21:09] [Information] [ScanFetch.Scanners.TcpScanner] Найдено несколько сетевых интерфейсов. Выберите, какой использовать для прослушивания:
+[2026-01-14 02:21:16] [Information] [ScanFetch.Scanners.TcpScanner] Выбрана опция 1: enp0s31f6 (192.168.1.12)
+[2026-01-14 02:21:16] [Error] [Program] Режим CancelOnAny включен. Прерываем подключение.
+[2026-01-14 02:21:16] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера :2002
+[2026-01-14 02:21:16] [Error] [Program] Ошибка подключения одного из сканеров. Нажмите Enter для повтора...

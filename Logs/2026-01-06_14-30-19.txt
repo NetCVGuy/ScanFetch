@@ -1,0 +1,52 @@
+
+        __
+     __/o \_
+     \____  \
+         /   \
+   __   //\   \
+__/o \-//--\   \_/
+\____  ___  \  |
+     ||   \ |\ |
+    _||   _||_||
+
+    ScanFetch - MORGENSHTERN EDITION
+                                                 
+
+[2026-01-06 14:30:19] [Information] [Program] Запуск ScanFetch...
+[2026-01-06 14:30:19] [Information] [Program] Попытка подключения к 2 сканерам...
+[2026-01-06 14:30:19] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.0.10:2002 (таймаут 20с)...
+[2026-01-06 14:30:19] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 192.168.0.10:2002!
+[2026-01-06 14:30:19] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание сканера 192.168.0.10:2002
+[2026-01-06 14:30:19] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.0.9:2002 (таймаут 20с)...
+[2026-01-06 14:30:22] [Warning] [ScanFetch.Scanners.TcpScanner] Ошибка подключения к 192.168.0.9:2002: No route to host
+[2026-01-06 14:30:22] [Error] [Program] Режим CancelOnAny включен. Прерываем подключение.
+[2026-01-06 14:30:22] [Information] [ScanFetch.Scanners.TcpScanner] Прослушивание остановлено для 192.168.0.10:2002
+[2026-01-06 14:30:22] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера 192.168.0.10:2002
+[2026-01-06 14:30:22] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера 192.168.0.9:2002
+[2026-01-06 14:30:22] [Error] [Program] Ошибка подключения одного из сканеров. Нажмите Enter для повтора...
+[2026-01-06 14:30:32] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера 192.168.0.10:2002
+[2026-01-06 14:30:32] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера 192.168.0.9:2002
+[2026-01-06 14:30:32] [Information] [Program] Попытка подключения к 2 сканерам...
+[2026-01-06 14:30:32] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.0.10:2002 (таймаут 20с)...
+[2026-01-06 14:30:32] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 192.168.0.10:2002!
+[2026-01-06 14:30:32] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание сканера 192.168.0.10:2002
+[2026-01-06 14:30:32] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.0.9:2002 (таймаут 20с)...
+[2026-01-06 14:30:35] [Warning] [ScanFetch.Scanners.TcpScanner] Ошибка подключения к 192.168.0.9:2002: No route to host
+[2026-01-06 14:30:35] [Error] [Program] Режим CancelOnAny включен. Прерываем подключение.
+[2026-01-06 14:30:35] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера 192.168.0.10:2002
+[2026-01-06 14:30:35] [Information] [ScanFetch.Scanners.TcpScanner] Прослушивание остановлено для 192.168.0.10:2002
+[2026-01-06 14:30:35] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера 192.168.0.9:2002
+[2026-01-06 14:30:35] [Error] [Program] Ошибка подключения одного из сканеров. Нажмите Enter для повтора...
+[2026-01-06 14:30:41] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера 192.168.0.10:2002
+[2026-01-06 14:30:41] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера 192.168.0.9:2002
+[2026-01-06 14:30:41] [Information] [Program] Попытка подключения к 2 сканерам...
+[2026-01-06 14:30:41] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.0.10:2002 (таймаут 20с)...
+[2026-01-06 14:30:41] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 192.168.0.10:2002!
+[2026-01-06 14:30:41] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание сканера 192.168.0.10:2002
+[2026-01-06 14:30:41] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.0.9:2002 (таймаут 20с)...
+[2026-01-06 14:30:44] [Warning] [ScanFetch.Scanners.TcpScanner] Ошибка подключения к 192.168.0.9:2002: No route to host
+[2026-01-06 14:30:44] [Error] [Program] Режим CancelOnAny включен. Прерываем подключение.
+[2026-01-06 14:30:44] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера 192.168.0.10:2002
+[2026-01-06 14:30:44] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера 192.168.0.9:2002
+[2026-01-06 14:30:44] [Information] [ScanFetch.Scanners.TcpScanner] Прослушивание остановлено для 192.168.0.10:2002
+[2026-01-06 14:30:44] [Error] [Program] Ошибка подключения одного из сканеров. Нажмите Enter для повтора...

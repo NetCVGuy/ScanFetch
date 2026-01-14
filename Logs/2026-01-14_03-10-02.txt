@@ -1,0 +1,18 @@
+
+        __
+     __/o \_
+     \____  \
+         /   \
+   __   //\   \
+__/o \-//--\   \_/
+\____  ___  \  |
+     ||   \ |\ |
+    _||   _||_||
+
+    ScanFetch - MORGENSHTERN EDITION
+                                                 
+
+[2026-01-14 03:10:02] [Information] [Program] Запуск ScanFetch...
+[2026-01-14 03:10:02] [Information] [Program] Попытка подключения к 1 сканерам...
+[2026-01-14 03:10:02] [Information] [ScanFetch.Scanners.TcpScanner] Режим сервера: подготовка завершена, слушатель будет запущен в StartListeningAsync
+[2026-01-14 03:10:02] [Information] [ScanFetch.Scanners.TcpScanner] Найдено несколько сетевых интерфейсов. Выберите, какой использовать для прослушивания:

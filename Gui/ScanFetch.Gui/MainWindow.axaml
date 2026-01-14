@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="ScanFetch.Gui.MainWindow"
+        Title="ScanFetch Config Editor"
+        Width="800" Height="600">
+  <Grid Margin="8">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="2*" />
+      <ColumnDefinition Width="3*" />
+    </Grid.ColumnDefinitions>
+
+    <StackPanel Grid.Column="0" Margin="0,0,8,0">
+      <TextBlock Text="Scanners" FontSize="16"/>
+      <ListBox Name="ScannersList" Height="320" />
+      <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
+        <Button Name="AddScannerBtn" Content="Add" Width="80" Margin="0,0,8,0" />
+        <Button Name="RemoveScannerBtn" Content="Remove" Width="80" />
+      </StackPanel>
+
+      <Separator Margin="0,8,0,8" />
+
+      <TextBlock Text="Scanner Details" FontSize="14"/>
+      <TextBlock Text="Name"/>
+      <TextBox Name="ScannerNameBox" />
+      <TextBlock Text="IP"/>
+      <TextBox Name="ScannerIpBox" />
+      <TextBlock Text="Port"/>
+      <TextBox Name="ScannerPortBox" />
+      <TextBlock Text="Role"/>
+      <ComboBox Name="ScannerRoleBox">
+        <ComboBoxItem Content="Client" />
+        <ComboBoxItem Content="Server" />
+      </ComboBox>
+      <TextBlock Text="ListenInterface (optional)"/>
+      <TextBox Name="ListenInterfaceBox" />
+    </StackPanel>
+
+    <StackPanel Grid.Column="1">
+      <TextBlock Text="GoogleSheets / File Output" FontSize="16"/>
+      <TextBlock Text="WebhookUrl"/>
+      <TextBox Name="WebhookUrlBox" />
+      <TextBlock Text="OutputPath"/>
+      <TextBox Name="OutputPathBox" />
+      <TextBlock Text="FilePrefix"/>
+      <TextBox Name="FilePrefixBox" />
+      <TextBlock Text="FileSuffix"/>
+      <TextBox Name="FileSuffixBox" />
+      <TextBlock Text="FileFormat"/>
+      <TextBox Name="FileFormatBox" />
+      <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
+        <CheckBox Name="EnableFileOutputBox" Content="Enable File Output" Margin="0,0,12,0" />
+        <CheckBox Name="EnableGoogleSheetsBox" Content="Enable GoogleSheets" />
+      </StackPanel>
+
+      <Separator Margin="0,8,0,8" />
+
+      <TextBlock Text="Raw JSON (for advanced edits)" FontSize="14"/>
+      <TextBox Name="JsonTextBox" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" FontFamily="Consolas" FontSize="12" Height="200"/>
+
+      <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,8,0,0">
+        <Button Name="PrettyBtn" Content="Pretty Print" Margin="0,0,8,0"/>
+        <Button Name="SaveBtn" Content="Save" />
+      </StackPanel>
+    </StackPanel>
+  </Grid>
+</Window>

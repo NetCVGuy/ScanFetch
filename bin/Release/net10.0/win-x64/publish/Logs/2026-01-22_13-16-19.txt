@@ -1,0 +1,17 @@
+
+        __
+     __/o \_
+     \____  \
+         /   \
+   __   //\   \
+__/o \-//--\   \_/
+\____  ___  \  |
+     ||   \ |\ |
+    _||   _||_||
+
+    ScanFetch - MORGENSHTERN EDITION
+                                                 
+
+[2026-01-22 13:16:19] [Information] [Program] Запуск ScanFetch...
+[2026-01-22 13:16:19] [Information] [Program] Попытка подключения к 2 сканерам...
+[2026-01-22 13:16:19] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.0.10:2002 (таймаут 20с)...

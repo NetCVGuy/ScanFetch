@@ -1,0 +1,55 @@
+
+        __
+     __/o \_
+     \____  \
+         /   \
+   __   //\   \
+__/o \-//--\   \_/
+\____  ___  \  |
+     ||   \ |\ |
+    _||   _||_||
+
+    ScanFetch - MORGENSHTERN EDITION
+                                                 
+
+[2026-01-23 00:51:35] [Information] [Program] Запуск ScanFetch...
+[2026-01-23 00:51:36] [Information] [ScanFetch.Api.MonitoringApi] 🌐 Monitoring API запущен на http://[::]:5000
+[2026-01-23 00:51:36] [Information] [Program] Monitoring API запущен на порту 5000
+[2026-01-23 00:52:33] [Information] [Program] Попытка подключения к 1 сканерам...
+[2026-01-23 00:52:33] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 127.0.0.1:2002 (таймаут 20с)...
+[2026-01-23 00:52:33] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 127.0.0.1:2002!
+[2026-01-23 00:52:33] [Information] [ScanFetch.Scanners.TcpScanner] Режим разделителя: Автоматический (CR/LF)
+[2026-01-23 00:52:33] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 127.0.0.1:2002
+[2026-01-23 00:52:33] [Information] [Program] Все сканеры успешно подключены и работают.
+[2026-01-23 00:54:08] [Warning] [ScanFetch.Scanners.TcpScanner] Соединение закрыто 127.0.0.1:2002
+[2026-01-23 00:54:08] [Warning] [Program] Соединения со сканерами потеряны. Перезапуск через 5с...
+[2026-01-23 00:54:13] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера 127.0.0.1:2002
+[2026-01-23 00:54:13] [Information] [ScanFetch.Api.MonitoringApi] Monitoring API остановлен
+[2026-01-23 00:54:13] [Information] [Program] Monitoring API остановлен
+[2026-01-23 00:54:13] [Information] [ScanFetch.Api.MonitoringApi] 🌐 Monitoring API запущен на http://[::]:5000
+[2026-01-23 00:54:13] [Information] [Program] Monitoring API запущен на порту 5000
+[2026-01-23 00:55:02] [Information] [Program] Попытка подключения к 1 сканерам...
+[2026-01-23 00:55:02] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 127.0.0.1:2002 (таймаут 20с)...
+[2026-01-23 00:55:02] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 127.0.0.1:2002!
+[2026-01-23 00:55:02] [Information] [ScanFetch.Scanners.TcpScanner] Режим разделителя: Автоматический (CR/LF)
+[2026-01-23 00:55:02] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 127.0.0.1:2002
+[2026-01-23 00:55:02] [Information] [Program] Все сканеры успешно подключены и работают.
+[2026-01-23 00:55:17] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 00:56:01] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z123123<CR><LF>
+[2026-01-23 00:56:01] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z123123 (Timestamp: 1769118961) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 00:56:36] [Warning] [ScanFetch.Services.GoogleSheetsWebhook] Timeout при отправке в Google Sheets (попытка 1/2). Повтор через 2с...
+[2026-01-23 00:57:13] [Error] [ScanFetch.Services.GoogleSheetsWebhook] Ошибка при отправке в Google Sheets (попытка 2/2)
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at ScanFetch.Services.GoogleSheetsWebhook.SendToGoogleSheetsAsync(String code, String scannerName, String remote) in /run/media/zahar/moding/VSPRJ/ScanFetch/Services/GoogleSheetsWebhook.cs:line 186
+[2026-01-23 01:00:11] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:00:14] [Information] [ScanFetch.Api.MonitoringApi] SSE клиент отключился
+[2026-01-23 01:00:22] [Information] [ScanFetch.Api.MonitoringApi] SSE клиент отключился
+[2026-01-23 01:00:27] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился

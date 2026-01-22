@@ -1,0 +1,116 @@
+
+        __
+     __/o \_
+     \____  \
+         /   \
+   __   //\   \
+__/o \-//--\   \_/
+\____  ___  \  |
+     ||   \ |\ |
+    _||   _||_||
+
+    ScanFetch - MORGENSHTERN EDITION
+                                                 
+
+[2026-01-23 01:03:33] [Information] [Program] Запуск ScanFetch...
+[2026-01-23 01:03:33] [Information] [ScanFetch.Api.MonitoringApi] 🌐 Monitoring API запущен на http://[::]:5000
+[2026-01-23 01:03:33] [Information] [Program] Monitoring API запущен на порту 5000
+[2026-01-23 01:03:34] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:03:34] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:03:34] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:03:34] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:03:34] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:03:34] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:04:46] [Information] [Program] Попытка подключения к 1 сканерам...
+[2026-01-23 01:04:46] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 127.0.0.1:2002 (таймаут 20с)...
+[2026-01-23 01:04:46] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 127.0.0.1:2002!
+[2026-01-23 01:04:46] [Information] [ScanFetch.Scanners.TcpScanner] Режим разделителя: Автоматический (CR/LF)
+[2026-01-23 01:04:46] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 127.0.0.1:2002
+[2026-01-23 01:04:46] [Information] [Program] Все сканеры успешно подключены и работают.
+[2026-01-23 01:04:59] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: asdasd<CR><LF>
+[2026-01-23 01:04:59] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: asdasd (Timestamp: 1769119499) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 01:05:18] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":4,"col":1,"code":"asdasd","foundMatch":false,"message":"asdasd"}
+[2026-01-23 01:05:46] [Warning] [ScanFetch.Scanners.TcpScanner] Соединение закрыто 127.0.0.1:2002
+[2026-01-23 01:05:46] [Warning] [Program] Соединения со сканерами потеряны. Перезапуск через 5с...
+[2026-01-23 01:05:51] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера 127.0.0.1:2002
+[2026-01-23 01:06:21] [Information] [ScanFetch.Api.MonitoringApi] SSE клиент отключился
+[2026-01-23 01:06:21] [Information] [ScanFetch.Api.MonitoringApi] SSE клиент отключился
+[2026-01-23 01:06:21] [Information] [ScanFetch.Api.MonitoringApi] SSE клиент отключился
+[2026-01-23 01:06:21] [Information] [ScanFetch.Api.MonitoringApi] SSE клиент отключился
+[2026-01-23 01:06:21] [Information] [ScanFetch.Api.MonitoringApi] SSE клиент отключился
+[2026-01-23 01:06:21] [Information] [ScanFetch.Api.MonitoringApi] SSE клиент отключился
+[2026-01-23 01:06:21] [Information] [ScanFetch.Api.MonitoringApi] Monitoring API остановлен
+[2026-01-23 01:06:21] [Information] [Program] Monitoring API остановлен
+[2026-01-23 01:06:21] [Information] [ScanFetch.Api.MonitoringApi] 🌐 Monitoring API запущен на http://[::]:5000
+[2026-01-23 01:06:21] [Information] [Program] Monitoring API запущен на порту 5000
+[2026-01-23 01:06:21] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:06:21] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:06:21] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:06:21] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:06:21] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:06:21] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:06:32] [Information] [Program] Попытка подключения к 1 сканерам...
+[2026-01-23 01:06:32] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 127.0.0.1:2002 (таймаут 20с)...
+[2026-01-23 01:06:32] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 127.0.0.1:2002!
+[2026-01-23 01:06:32] [Information] [ScanFetch.Scanners.TcpScanner] Режим разделителя: Автоматический (CR/LF)
+[2026-01-23 01:06:32] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 127.0.0.1:2002
+[2026-01-23 01:06:32] [Information] [Program] Все сканеры успешно подключены и работают.
+[2026-01-23 01:06:50] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M05<CR><LF>
+[2026-01-23 01:06:50] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537M05 (Timestamp: 1769119610) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 01:06:54] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M08<CR><LF>
+[2026-01-23 01:06:54] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":4,"col":6,"code":"Z3A537M05","foundMatch":true,"message":"Z3A537M05"}
+[2026-01-23 01:06:54] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537M08 (Timestamp: 1769119614) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 01:06:56] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M77<CR><LF>
+[2026-01-23 01:06:57] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":5,"col":6,"code":"Z3A537M08","foundMatch":true,"message":"Z3A537M08"}
+[2026-01-23 01:06:57] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537M77 (Timestamp: 1769119617) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 01:06:58] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M235<CR><LF>
+[2026-01-23 01:06:59] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":6,"col":6,"code":"Z3A537M77","foundMatch":true,"message":"Z3A537M77"}
+[2026-01-23 01:06:59] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537M235 (Timestamp: 1769119619) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 01:07:00] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M66<CR><LF>
+[2026-01-23 01:07:02] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":7,"col":6,"code":"Z3A537M235","foundMatch":true,"message":"Z3A537M235"}
+[2026-01-23 01:07:02] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537M66 (Timestamp: 1769119622) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 01:07:06] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":8,"col":6,"code":"Z3A537M66","foundMatch":true,"message":"Z3A537M66"}
+[2026-01-23 01:07:06] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537N81283481<CR><LF>
+[2026-01-23 01:07:06] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537N81283481 (Timestamp: 1769119626) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 01:07:11] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":3,"col":8,"code":"Z3A537N81283481","foundMatch":true,"message":"Z3A537N81283481"}
+[2026-01-23 01:07:17] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M<CR><LF>
+[2026-01-23 01:07:17] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537M (Timestamp: 1769119637) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 01:07:19] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M8<CR><LF>
+[2026-01-23 01:07:21] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M8<CR><LF>
+[2026-01-23 01:07:23] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M7<CR><LF>
+[2026-01-23 01:07:23] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":9,"col":6,"code":"Z3A537M","foundMatch":true,"message":"Z3A537M"}
+[2026-01-23 01:07:23] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537M8 (Timestamp: 1769119643) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 01:07:24] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M6<CR><LF>
+[2026-01-23 01:07:25] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M5<CR><LF>
+[2026-01-23 01:07:26] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":10,"col":6,"code":"Z3A537M8","foundMatch":true,"message":"Z3A537M8"}
+[2026-01-23 01:07:26] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 2.9с назад): Z3A537M8
+[2026-01-23 01:07:26] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537M7 (Timestamp: 1769119646) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 01:07:26] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: 'Z3A537M4<CR><LF>
+[2026-01-23 01:07:27] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537Mh<CR><LF>
+[2026-01-23 01:07:29] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537Mj<CR><LF>
+[2026-01-23 01:07:30] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537Mi<CR><LF>
+[2026-01-23 01:07:30] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":11,"col":6,"code":"Z3A537M7","foundMatch":true,"message":"Z3A537M7"}
+[2026-01-23 01:07:30] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537M6 (Timestamp: 1769119650) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 01:07:31] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537Mk<CR><LF>
+[2026-01-23 01:07:32] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537Mjk<CR><LF>
+[2026-01-23 01:07:34] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: VnZ3A537M<CR><LF>
+[2026-01-23 01:07:37] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":12,"col":6,"code":"Z3A537M6","foundMatch":true,"message":"Z3A537M6"}
+[2026-01-23 01:07:37] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537M5 (Timestamp: 1769119657) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 01:07:40] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":13,"col":6,"code":"Z3A537M5","foundMatch":true,"message":"Z3A537M5"}
+[2026-01-23 01:07:40] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: 'Z3A537M4 (Timestamp: 1769119660) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 01:07:41] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537Ml<CR><LF>
+[2026-01-23 01:07:43] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":14,"col":6,"code":"'Z3A537M4","foundMatch":true,"message":"'Z3A537M4"}
+[2026-01-23 01:07:43] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537Mh (Timestamp: 1769119663) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 01:07:46] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":15,"col":6,"code":"Z3A537Mh","foundMatch":true,"message":"Z3A537Mh"}
+[2026-01-23 01:07:46] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537Mj (Timestamp: 1769119666) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 01:07:49] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":16,"col":6,"code":"Z3A537Mj","foundMatch":true,"message":"Z3A537Mj"}
+[2026-01-23 01:07:49] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537Mi (Timestamp: 1769119669) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 01:07:55] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":17,"col":6,"code":"Z3A537Mi","foundMatch":true,"message":"Z3A537Mi"}
+[2026-01-23 01:07:55] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537Mk (Timestamp: 1769119675) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 01:08:00] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":18,"col":6,"code":"Z3A537Mk","foundMatch":true,"message":"Z3A537Mk"}
+[2026-01-23 01:08:00] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537Mjk (Timestamp: 1769119680) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 01:08:04] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":19,"col":6,"code":"Z3A537Mjk","foundMatch":true,"message":"Z3A537Mjk"}
+[2026-01-23 01:08:04] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: VnZ3A537M (Timestamp: 1769119684) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 01:08:09] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":20,"col":6,"code":"VnZ3A537M","foundMatch":true,"message":"VnZ3A537M"}
+[2026-01-23 01:08:09] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537Ml (Timestamp: 1769119689) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 01:08:14] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":21,"col":6,"code":"Z3A537Ml","foundMatch":true,"message":"Z3A537Ml"}

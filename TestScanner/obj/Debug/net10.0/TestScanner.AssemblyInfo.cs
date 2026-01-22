@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TestScanner")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84f031b05067fac49d4fea30ad9ee906829d44a9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79341abaa23fc6d45e11c8ec430d7767c7c2d669")]
 [assembly: System.Reflection.AssemblyProductAttribute("TestScanner")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TestScanner")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

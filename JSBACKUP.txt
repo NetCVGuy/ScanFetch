@@ -1,0 +1,151 @@
+у меня есть такая гугл таблица, мой сканер отправляет в нее отсканированные серийные номера в столбец B, каждый серийный номер соответствует своей модели, например серийный номер Z3A537R050460 - соответствует Z3A537R (ячейка N2) - модель | 4 | HS-32F01FB (модель N1). Также есть такой код в гугл apps script: function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("TEST");
+  var data = JSON.parse(e.postData.contents);
+  
+  var lastRow = sheet.getLastRow();            // определяем последний номер строки
+  var nextIndex = lastRow > 0 ? lastRow + 1 : 1;
+
+  var serial = data.code;                      // считанный код
+  var defect = "1";                             // пока пусто
+  var now = new Date();                        // текущие дата и время
+
+  // Вставляем по нужным колонкам:
+  // Колонка A — № (порядковый номер)
+  // Колонка B — Серийный номер (code)
+  // Колонка C — Дефект (пока пусто)
+  // Колонка D — Дата и время
+  sheet.appendRow([nextIndex, serial, defect, now]);
+
+  return ContentService.createTextOutput("OK");
+}TextOutput("OK");
+}
+
+код записывает серийные номера в столбец B, мне нужно чтобы код перед записью серийных номеров проверял совпадение серийного номера с одной из частей в диапазоне F2:Z2 при нахождении соответствия записывал его под этой моделью, например серийный номер Z3A537R050460 - соответствует Z3A537R (ячейка N2) - модель | 4 | HS-32F01FB (модель N1), значит серийные номера с этой моделью записываются в диапазон N3:N, а дата и время справа от серийного номера, в нашем случае O2:O. Если серийный номер не будет подходить под префикс, то его нужно записать в столбец B как неопознанный серийный номер, также нужно учесть что сразу идет столбец с префиксом после него пустой столбец для даты и времени, скрипт должен работать автоматически, и будет постоянно записывать данные в таблицу без участия человека
+
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("TEST");
+  if (!sheet) return ContentService.createTextOutput("Sheet 'TEST' not found");
+
+  var data = JSON.parse(e.postData.contents);
+  //var serial = data.code;                      // считанный код
+  var defect = "1";                             // пока пусто
+  var now = new Date();                        // текущие дата и время
+
+  // Получаем диапазон F2:Z2 — это наши префиксы
+  var prefixRange = sheet.getRange(2, 6, 1, 21); // F2:Z2 (21 столбцов)
+  var prefixes = prefixRange.getValues()[0];    // массив префиксов
+
+  var targetColIndex = -1;
+  var foundPrefix = "";
+
+  // Ищем подходящий префикс
+  for (var i = 0; i < prefixes.length; i++) {
+    var prefix = prefixes[i];
+    if (prefix && serial.startsWith(prefix)) {
+      targetColIndex = i + 6; // F — это 6-й столбец, Z — 26-й
+      foundPrefix = prefix;
+      break;
+    }
+  }
+
+  if (targetColIndex === -1) {
+    // Не найден префикс — пишем в столбец B (как раньше)
+    var lastRowB = sheet.getLastRow();
+    var nextRow = lastRowB > 0 ? lastRowB + 1 : 1;
+    sheet.getRange(nextRow, 1).setValue(nextRow);           // A
+    sheet.getRange(nextRow, 2).setValue(serial);            // B
+    sheet.getRange(nextRow, 3).setValue(defect);            // C
+    sheet.getRange(nextRow, 4).setValue(now);               // D
+  } else {
+    // Найден префикс — пишем в целевой столбец (например, N) и дату в следующий (O)
+    var targetCol = targetColIndex;
+    var dateCol = targetCol + 1; // дата справа от серийника
+
+    // Находим последнюю заполненную строку в целевом столбце
+    var lastRowInTargetCol = sheet.getLastRow();
+    var valuesInTargetCol = sheet.getRange(3, targetCol, lastRowInTargetCol - 2, 1).getValues(); // начиная с строки 3
+
+    var nextRow = 3; // начинаем с 3-й строки
+    for (var i = 0; i < valuesInTargetCol.length; i++) {
+      if (valuesInTargetCol[i][0] === "") {
+        nextRow = i + 3;
+        break;
+      }
+    }
+    if (nextRow === 3 && valuesInTargetCol.length > 0 && valuesInTargetCol[valuesInTargetCol.length - 1][0] !== "") {
+      nextRow = lastRowInTargetCol + 1;
+    }
+
+    // Записываем серийный номер и дату
+    sheet.getRange(nextRow, targetCol).setValue(serial);
+    sheet.getRange(nextRow, dateCol).setValue(now);
+  }
+
+  return ContentService.createTextOutput("OK");
+}
+// function doPost(e) {
+  //var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("TEST");
+  //var data = JSON.parse(e.postData.contents);
+  
+  //var lastRow = sheet.getLastRow();            // определяем последний номер строки
+  //var nextIndex = lastRow > 0 ? lastRow + 1 : 1;
+
+ // var serial = data.code;                      // считанный код
+ // var defect = "1";                             // пока пусто
+ // var now = new Date();                        // текущие дата и время
+
+  // Вставляем по нужным колонкам:
+  // Колонка A — № (порядковый номер)
+  // Колонка B — Серийный номер (code)
+  // Колонка C — Дефект (пока пусто)
+  // Колонка D — Дата и время
+ // sheet.appendRow([nextIndex, serial, defect, now]);
+
+ // return ContentService.createTextOutput("OK");
+//}
+
+
+function onEdit(e) { 
+  var sheet = e.source.getActiveSheet(); 
+  var activeCell = sheet.getActiveCell(); 
+  var col = activeCell.getColumn(); 
+  var row = activeCell.getRow(); 
+  if ((col == 2) && sheet.getRange(row, col).getValue() != "") { 
+    sheet.getRange(row, 4).setValue(new Date()).setNumberFormat('dd.mm.yy hh:mm:ss'); 
+  } 
+}
+
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("test 1"); // Имя листа
+  var data = JSON.parse(e.postData.contents);
+
+  var now = new Date(); 
+  var code = data.code;
+
+  sheet.appendRow([now, code]);
+
+  return ContentService.createTextOutput("OK");
+}
+
+ Старая версия 
+function onEdit_o(e) { 
+  var sheet = e.source.getActiveSheet(); 
+  var activeCell = sheet.getActiveCell(); 
+  var col = activeCell.getColumn(); 
+  var row = activeCell.getRow(); 
+  if ((col == 2) && sheet.getRange(row, col).getValue() != "") { 
+    sheet.getRange(row, 4).setValue(new Date()).setNumberFormat('dd.mm.yy hh:mm:ss'); 
+  } 
+}
+
+function doPost_o(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("test 1"); // Имя листа
+  var data = JSON.parse(e.postData.contents);
+
+  var now = new Date(); 
+  var code = data.code;
+
+  sheet.appendRow([now, code]);
+
+  return ContentService.createTextOutput("OK");
+}

@@ -1,0 +1,71 @@
+
+        __
+     __/o \_
+     \____  \
+         /   \
+   __   //\   \
+__/o \-//--\   \_/
+\____  ___  \  |
+     ||   \ |\ |
+    _||   _||_||
+
+    ScanFetch - MORGENSHTERN EDITION
+                                                 
+
+[2026-01-23 01:19:39] [Information] [Program] Запуск ScanFetch...
+[2026-01-23 01:19:39] [Information] [ScanFetch.Api.MonitoringApi] 🌐 Monitoring API запущен на http://0.0.0.0:5000
+[2026-01-23 01:19:39] [Information] [Program] Monitoring API запущен на порту 5000
+[2026-01-23 01:19:40] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:19:40] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:19:40] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:19:40] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:19:40] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:19:40] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:19:44] [Information] [Program] Попытка подключения к 1 сканерам...
+[2026-01-23 01:19:44] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 127.0.0.1:2002 (таймаут 20с)...
+[2026-01-23 01:19:44] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 127.0.0.1:2002!
+[2026-01-23 01:19:44] [Information] [ScanFetch.Scanners.TcpScanner] Режим разделителя: Автоматический (CR/LF)
+[2026-01-23 01:19:44] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 127.0.0.1:2002
+[2026-01-23 01:19:44] [Information] [Program] Все сканеры успешно подключены и работают.
+[2026-01-23 01:20:02] [Warning] [ScanFetch.Scanners.TcpScanner] Ошибка при прослушивании сканера 127.0.0.1:2002
+System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer.
+ ---> System.Net.Sockets.SocketException (104): Connection reset by peer
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at ScanFetch.Scanners.TcpScanner.StartListeningAsync() in /run/media/zahar/moding/VSPRJ/ScanFetch/Scanners/TcpScanner.cs:line 459
+[2026-01-23 01:20:02] [Error] [Program] Критическая ошибка в главном цикле
+System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer.
+ ---> System.Net.Sockets.SocketException (104): Connection reset by peer
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at ScanFetch.Scanners.TcpScanner.StartListeningAsync() in /run/media/zahar/moding/VSPRJ/ScanFetch/Scanners/TcpScanner.cs:line 459
+   at Program.<Main>$(String[] args) in /run/media/zahar/moding/VSPRJ/ScanFetch/Program.cs:line 328
+[2026-01-23 01:20:02] [Information] [Program] Перезапуск через 5с...
+[2026-01-23 01:20:07] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера 127.0.0.1:2002
+[2026-01-23 01:20:37] [Information] [ScanFetch.Api.MonitoringApi] SSE клиент отключился
+[2026-01-23 01:20:37] [Information] [ScanFetch.Api.MonitoringApi] SSE клиент отключился
+[2026-01-23 01:20:37] [Information] [ScanFetch.Api.MonitoringApi] SSE клиент отключился
+[2026-01-23 01:20:37] [Information] [ScanFetch.Api.MonitoringApi] SSE клиент отключился
+[2026-01-23 01:20:37] [Information] [ScanFetch.Api.MonitoringApi] SSE клиент отключился
+[2026-01-23 01:20:37] [Information] [ScanFetch.Api.MonitoringApi] SSE клиент отключился
+[2026-01-23 01:20:37] [Information] [ScanFetch.Api.MonitoringApi] Monitoring API остановлен
+[2026-01-23 01:20:37] [Information] [Program] Monitoring API остановлен
+[2026-01-23 01:20:37] [Information] [ScanFetch.Api.MonitoringApi] 🌐 Monitoring API запущен на http://0.0.0.0:5000
+[2026-01-23 01:20:37] [Information] [Program] Monitoring API запущен на порту 5000
+[2026-01-23 01:20:37] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:20:37] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:20:37] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:20:37] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:20:37] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:20:37] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:20:44] [Information] [Program] Попытка подключения к 1 сканерам...
+[2026-01-23 01:20:44] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 127.0.0.1:2002 (таймаут 20с)...
+[2026-01-23 01:20:44] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 127.0.0.1:2002!
+[2026-01-23 01:20:44] [Information] [ScanFetch.Scanners.TcpScanner] Режим разделителя: Автоматический (CR/LF)
+[2026-01-23 01:20:44] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 127.0.0.1:2002
+[2026-01-23 01:20:44] [Information] [Program] Все сканеры успешно подключены и работают.
+[2026-01-23 01:20:51] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: fdghsd<CR><LF>
+[2026-01-23 01:20:51] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: fdghsd (Timestamp: 1769120451) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-23 01:21:26] [Warning] [ScanFetch.Services.GoogleSheetsWebhook] Timeout при отправке в Google Sheets (попытка 1/2). Повтор через 2с...

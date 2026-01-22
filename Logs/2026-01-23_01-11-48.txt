@@ -1,0 +1,106 @@
+
+        __
+     __/o \_
+     \____  \
+         /   \
+   __   //\   \
+__/o \-//--\   \_/
+\____  ___  \  |
+     ||   \ |\ |
+    _||   _||_||
+
+    ScanFetch - MORGENSHTERN EDITION
+                                                 
+
+[2026-01-23 01:11:48] [Information] [Program] Запуск ScanFetch...
+[2026-01-23 01:11:48] [Error] [Program] Не удалось запустить Monitoring API
+System.IO.IOException: Failed to bind to address http://0.0.0.0:5000: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (98): Address already in use
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at ScanFetch.Api.MonitoringApi.StartAsync(CancellationToken cancellationToken) in /run/media/zahar/moding/VSPRJ/ScanFetch/Api/MonitoringApi.cs:line 167
+   at Program.<Main>$(String[] args) in /run/media/zahar/moding/VSPRJ/ScanFetch/Program.cs:line 143
+[2026-01-23 01:11:58] [Information] [Program] Попытка подключения к 1 сканерам...
+[2026-01-23 01:11:58] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 127.0.0.1:2002 (таймаут 20с)...
+[2026-01-23 01:11:58] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 127.0.0.1:2002!
+[2026-01-23 01:11:58] [Information] [ScanFetch.Scanners.TcpScanner] Режим разделителя: Автоматический (CR/LF)
+[2026-01-23 01:11:58] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 127.0.0.1:2002
+[2026-01-23 01:11:58] [Information] [Program] Все сканеры успешно подключены и работают.
+[2026-01-23 01:13:36] [Warning] [ScanFetch.Scanners.TcpScanner] Ошибка при прослушивании сканера 127.0.0.1:2002
+System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer.
+ ---> System.Net.Sockets.SocketException (104): Connection reset by peer
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at ScanFetch.Scanners.TcpScanner.StartListeningAsync() in /run/media/zahar/moding/VSPRJ/ScanFetch/Scanners/TcpScanner.cs:line 459
+[2026-01-23 01:13:36] [Error] [Program] Критическая ошибка в главном цикле
+System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer.
+ ---> System.Net.Sockets.SocketException (104): Connection reset by peer
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at ScanFetch.Scanners.TcpScanner.StartListeningAsync() in /run/media/zahar/moding/VSPRJ/ScanFetch/Scanners/TcpScanner.cs:line 459
+   at Program.<Main>$(String[] args) in /run/media/zahar/moding/VSPRJ/ScanFetch/Program.cs:line 328
+[2026-01-23 01:13:36] [Information] [Program] Перезапуск через 5с...
+[2026-01-23 01:13:41] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера 127.0.0.1:2002
+[2026-01-23 01:13:41] [Information] [ScanFetch.Api.MonitoringApi] Monitoring API остановлен
+[2026-01-23 01:13:41] [Information] [Program] Monitoring API остановлен
+[2026-01-23 01:13:41] [Information] [ScanFetch.Api.MonitoringApi] 🌐 Monitoring API запущен на http://0.0.0.0:5000
+[2026-01-23 01:13:41] [Information] [Program] Monitoring API запущен на порту 5000
+[2026-01-23 01:13:41] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:13:41] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:13:41] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:13:41] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:13:41] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:13:41] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:13:57] [Information] [Program] Попытка подключения к 1 сканерам...
+[2026-01-23 01:13:57] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к - подключиться к сканеру:2002 (таймаут 20с)...
+[2026-01-23 01:13:57] [Warning] [ScanFetch.Scanners.TcpScanner] Ошибка подключения к - подключиться к сканеру:2002: Name or service not known
+[2026-01-23 01:13:57] [Error] [Program] Режим CancelOnAny включен. Прерываем подключение.
+[2026-01-23 01:13:57] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера - подключиться к сканеру:2002
+[2026-01-23 01:13:57] [Error] [Program] Ошибка подключения одного из сканеров. Повтор через 5с...
+[2026-01-23 01:14:02] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера - подключиться к сканеру:2002
+[2026-01-23 01:14:32] [Information] [ScanFetch.Api.MonitoringApi] SSE клиент отключился
+[2026-01-23 01:14:32] [Information] [ScanFetch.Api.MonitoringApi] SSE клиент отключился
+[2026-01-23 01:14:32] [Information] [ScanFetch.Api.MonitoringApi] SSE клиент отключился
+[2026-01-23 01:14:32] [Information] [ScanFetch.Api.MonitoringApi] SSE клиент отключился
+[2026-01-23 01:14:32] [Information] [ScanFetch.Api.MonitoringApi] SSE клиент отключился
+[2026-01-23 01:14:32] [Information] [ScanFetch.Api.MonitoringApi] SSE клиент отключился
+[2026-01-23 01:14:32] [Information] [ScanFetch.Api.MonitoringApi] Monitoring API остановлен
+[2026-01-23 01:14:32] [Information] [Program] Monitoring API остановлен
+[2026-01-23 01:14:32] [Information] [ScanFetch.Api.MonitoringApi] 🌐 Monitoring API запущен на http://0.0.0.0:5000
+[2026-01-23 01:14:32] [Information] [Program] Monitoring API запущен на порту 5000
+[2026-01-23 01:14:32] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:14:32] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:14:32] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:14:32] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:14:32] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:14:32] [Information] [ScanFetch.Api.MonitoringApi] Новый SSE клиент подключился
+[2026-01-23 01:14:50] [Information] [Program] Попытка подключения к 1 сканерам...
+[2026-01-23 01:14:50] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к ps aux | grep -i scanfetch | grep -v grep:2002 (таймаут 20с)...
+[2026-01-23 01:15:10] [Warning] [ScanFetch.Scanners.TcpScanner] Ошибка подключения к ps aux | grep -i scanfetch | grep -v grep:2002: A task was canceled.
+[2026-01-23 01:15:10] [Error] [Program] Режим CancelOnAny включен. Прерываем подключение.
+[2026-01-23 01:15:10] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера ps aux | grep -i scanfetch | grep -v grep:2002
+[2026-01-23 01:15:10] [Error] [Program] Ошибка подключения одного из сканеров. Повтор через 5с...
+[2026-01-23 01:15:15] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера ps aux | grep -i scanfetch | grep -v grep:2002

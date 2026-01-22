@@ -41,8 +41,11 @@ public class MonitoringApi
         builder.Logging.ClearProviders();
 
         _app = builder.Build();
-        _app.Urls.Add($"http://*:{port}");
+        _app.Urls.Add($"http://0.0.0.0:{port}");
         _app.UseCors();
+        
+        // Enable static files
+        _app.UseStaticFiles();
 
         ConfigureEndpoints();
     }
@@ -142,48 +145,21 @@ public class MonitoringApi
             }
         });
 
-        // GET / - простая главная страница
-        _app.MapGet("/", () => Results.Text(@"
-<!DOCTYPE html>
-<html>
-<head>
-    <title>ScanFetch Monitoring API</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 40px; }
-        h1 { color: #333; }
-        .endpoint { margin: 20px 0; padding: 15px; background: #f5f5f5; border-radius: 5px; }
-        code { background: #e0e0e0; padding: 2px 6px; border-radius: 3px; }
-    </style>
-</head>
-<body>
-    <h1>🔍 ScanFetch Monitoring API</h1>
-    <p>API для мониторинга сканеров штрих-кодов</p>
-    
-    <div class='endpoint'>
-        <h3>GET /api/status</h3>
-        <p>Получить текущий статус всех сканеров</p>
-    </div>
-    
-    <div class='endpoint'>
-        <h3>GET /api/errors?count=50</h3>
-        <p>Получить последние ошибки (count - количество, по умолчанию 50)</p>
-    </div>
-    
-    <div class='endpoint'>
-        <h3>GET /api/history?count=50</h3>
-        <p>Получить историю всех событий (count - количество, по умолчанию 50)</p>
-    </div>
-    
-    <div class='endpoint'>
-        <h3>GET /api/events</h3>
-        <p>SSE stream для получения уведомлений в реальном времени</p>
-    </div>
-    
-    <p style='margin-top: 40px; color: #666;'>
-        💡 Для использования в Android приложении подключайтесь к <code>http://IP_АДРЕС_СЕРВЕРА:PORT</code>
-    </p>
-</body>
-</html>", "text/html"));
+        // GET / - redirect to index.html or serve API info
+        _app.MapGet("/", () =>
+        {
+            return Results.Redirect("/index.html");
+        });
+        
+        // GET /api/logs - get recent log entries (placeholder for future file reading)
+        _app.MapGet("/api/logs", (int? count, string? level) =>
+        {
+            // For now, return empty array - can be extended to read from Logs directory
+            return Results.Ok(new
+            {
+                logs = new List<object>()
+            });
+        });
     }
 
     public async Task StartAsync(CancellationToken cancellationToken = default)

@@ -3,12 +3,15 @@ class ScanFetchMonitor {
     constructor() {
         this.apiUrl = window.location.origin;
         this.eventSource = null;
+        this.logEventSource = null;
         this.isConnected = false;
         this.startTime = Date.now();
         this.events = [];
         this.logs = [];
+        this.fullLogs = [];
         this.maxEvents = 100;
         this.maxLogs = 500;
+        this.maxFullLogs = 1000;
         
         this.init();
     }
@@ -16,6 +19,7 @@ class ScanFetchMonitor {
     init() {
         this.setupEventListeners();
         this.connectSSE();
+        this.connectLogSSE();
         this.loadInitialData();
         this.startUptimeCounter();
         this.requestNotificationPermission();
@@ -30,6 +34,14 @@ class ScanFetchMonitor {
         document.getElementById('clearEventsBtn').addEventListener('click', () => this.clearEvents());
         document.getElementById('clearLogsBtn').addEventListener('click', () => this.clearLogs());
         document.getElementById('logLevelFilter').addEventListener('change', (e) => this.filterLogs(e.target.value));
+        document.getElementById('clearFullLogsBtn').addEventListener('click', () => this.clearFullLogs());
+        document.getElementById('refreshFullLogsBtn').addEventListener('click', () => this.loadFullLogs());
+        document.getElementById('fullLogLevelFilter').addEventListener('change', (e) => this.loadFullLogs(e.target.value));
+        
+        // Tab switching
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => this.switchTab(e.target.dataset.tab));
+        });
     }
 
     // Request browser notification permission
@@ -117,6 +129,145 @@ class ScanFetchMonitor {
     async loadInitialData() {
         await this.loadScanners();
         await this.loadErrors();
+    }
+    
+    // Switch between tabs
+    switchTab(tabName) {
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.tab === tabName);
+        });
+        
+        document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.remove('active');
+        });
+        
+        if (tabName === 'events') {
+            document.getElementById('eventsTab').classList.add('active');
+        } else if (tabName === 'full-logs') {
+            document.getElementById('fullLogsTab').classList.add('active');
+            this.loadFullLogs();
+        }
+    }
+    
+    // Connect to log SSE stream
+    connectLogSSE() {
+        if (this.logEventSource) {
+            this.logEventSource.close();
+        }
+
+        this.logEventSource = new EventSource(`${this.apiUrl}/api/logs/stream`);
+
+        this.logEventSource.onmessage = (event) => {
+            const log = JSON.parse(event.data);
+            this.addFullLog(log);
+        };
+
+        this.logEventSource.onerror = () => {
+            console.log('Log SSE connection lost, reconnecting...');
+            this.logEventSource.close();
+            
+            setTimeout(() => {
+                this.connectLogSSE();
+            }, 5000);
+        };
+    }
+    
+    // Add full log entry
+    addFullLog(log) {
+        // Apply filter if set
+        const filter = document.getElementById('fullLogLevelFilter')?.value;
+        if (filter && log.level !== filter) {
+            return;
+        }
+        
+        this.fullLogs.unshift(log);
+        
+        if (this.fullLogs.length > this.maxFullLogs) {
+            this.fullLogs = this.fullLogs.slice(0, this.maxFullLogs);
+        }
+        
+        this.renderFullLogs();
+    }
+    
+    // Load full logs from server (not needed anymore, using SSE)
+    async loadFullLogs(level = '') {
+        // Just apply filter to existing logs
+        this.renderFullLogs();
+    }
+    
+    // Render full logs
+    renderFullLogs() {
+        const container = document.getElementById('fullLogsContainer');
+        const filter = document.getElementById('fullLogLevelFilter')?.value;
+        
+        let logsToRender = this.fullLogs;
+        if (filter) {
+            logsToRender = this.fullLogs.filter(log => log.level === filter);
+        }
+        
+        if (!logsToRender || logsToRender.length === 0) {
+            container.innerHTML = '<div class="empty-state">Нет логов для отображения</div>';
+            return;
+        }
+        
+        const time = (timestamp) => {
+            const date = new Date(timestamp);
+            return date.toLocaleTimeString('ru-RU');
+        };
+        
+        container.innerHTML = logsToRender.map(log => `
+            <div class="log-item log-${log.level}">
+                <span class="log-time">[${time(log.timestamp)}]</span>
+                <span class="log-source">${this.escapeHtml(log.source)}</span>
+                <span class="log-message">${this.escapeHtml(log.message)}</span>
+            </div>
+        `).join('');
+        
+        // Auto-scroll if enabled
+        const autoScroll = document.querySelector('#fullLogsTab .auto-scroll-toggle')?.checked;
+        if (autoScroll) {
+            container.scrollTop = container.scrollHeight;
+        }
+    }
+    
+    // Clear full logs display
+    clearFullLogs() {
+        this.fullLogs = [];
+        this.renderFullLogs();
+    }
+    
+    // Control functions
+    async startScanFetch() {
+        try {
+            const response = await fetch(`${this.apiUrl}/api/control/start`, { method: 'POST' });
+            const data = await response.json();
+            this.addLog('info', 'Команда запуска отправлена');
+            alert('Функция запуска в разработке');
+        } catch (error) {
+            this.addLog('error', 'Ошибка отправки команды запуска');
+        }
+    }
+    
+    async stopScanFetch() {
+        try {
+            const response = await fetch(`${this.apiUrl}/api/control/stop`, { method: 'POST' });
+            const data = await response.json();
+            this.addLog('info', 'Команда остановки отправлена');
+            alert('Функция остановки в разработке');
+        } catch (error) {
+            this.addLog('error', 'Ошибка отправки команды остановки');
+        }
+    }
+    
+    async restartScanFetch() {
+        try {
+            const response = await fetch(`${this.apiUrl}/api/control/restart`, { method: 'POST' });
+            const data = await response.json();
+            this.addLog('info', 'Команда перезапуска отправлена');
+            alert('Функция перезапуска в разработке');
+        } catch (error) {
+            this.addLog('error', 'Ошибка отправки команды перезапуска');
+        }
     }
 
     // Load scanners status

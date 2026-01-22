@@ -76,6 +76,12 @@
             <!-- Recent Events -->
             <section class="events-section">
                 <div class="card">
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="events">События</button>
+                        <button class="tab-btn" data-tab="full-logs">Полные логи</button>
+                    </div>
+                    
+                    <div id="eventsTab" class="tab-content active">
                     <h2>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
@@ -95,6 +101,35 @@
                     </div>
                     <div id="eventsContainer" class="events-list">
                         <div class="empty-state">Нет событий</div>
+                    </div>
+                    </div>
+                    
+                    <div id="fullLogsTab" class="tab-content">
+                        <h2>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>
+                            </svg>
+                            Полные логи системы
+                        </h2>
+                        <div class="logs-controls">
+                            <select id="fullLogLevelFilter">
+                                <option value="">Все уровни</option>
+                                <option value="error">Ошибки</option>
+                                <option value="warning">Предупреждения</option>
+                                <option value="information">Информация</option>
+                                <option value="debug">Отладка</option>
+                                <option value="trace">Трассировка</option>
+                            </select>
+                            <label class="auto-scroll-label">
+                                <input type="checkbox" class="auto-scroll-toggle" checked>
+                                Авто-прокрутка
+                            </label>
+                            <button id="clearFullLogsBtn" class="btn btn-small btn-danger">Очистить</button>
+                        </div>
+                        <div id="fullLogsContainer" class="logs-list">
+                            <div class="loading">Загрузка логов...</div>
+                        </div>
                     </div>
                 </div>
             </section>

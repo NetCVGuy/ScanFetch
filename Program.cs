@@ -52,6 +52,22 @@ logger.LogInformation("Запуск ScanFetch...");
 // Создаем EventBus для мониторинга событий
 var eventBus = new EventBus();
 
+// Пересоздаём логирование с EventBus для веб-мониторинга
+services = new ServiceCollection();
+services.AddLogging(builder =>
+{
+    builder.AddConfiguration(configuration.GetSection("Logging"));
+    builder.ClearProviders();
+    builder.AddProvider(new SpectreConsoleLoggerProvider(eventBus));
+    builder.AddProvider(new FileLoggerProvider(logFileName));
+});
+services.AddSingleton(appSettings);
+serviceProvider = services.BuildServiceProvider();
+loggerFactory = serviceProvider.GetRequiredService<ILoggerFactory>();
+logger = loggerFactory.CreateLogger<Program>();
+
+logger.LogInformation("EventBus инициализирован для веб-мониторинга");
+
 // Публикуем событие запуска приложения
 eventBus.Publish(new ScannerEvent
 {

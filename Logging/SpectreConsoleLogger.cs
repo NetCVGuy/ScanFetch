@@ -1,13 +1,21 @@
 using Microsoft.Extensions.Logging;
 using Spectre.Console;
+using ScanFetch.Services;
 
 namespace ScanFetch.Logging;
 
 public class SpectreConsoleLoggerProvider : ILoggerProvider
 {
+    private readonly EventBus? _eventBus;
+    
+    public SpectreConsoleLoggerProvider(EventBus? eventBus = null)
+    {
+        _eventBus = eventBus;
+    }
+    
     public ILogger CreateLogger(string categoryName)
     {
-        return new SpectreConsoleLogger(categoryName);
+        return new SpectreConsoleLogger(categoryName, _eventBus);
     }
 
     public void Dispose()
@@ -18,10 +26,12 @@ public class SpectreConsoleLoggerProvider : ILoggerProvider
 public class SpectreConsoleLogger : ILogger
 {
     private readonly string _categoryName;
+    private readonly EventBus? _eventBus;
 
-    public SpectreConsoleLogger(string categoryName)
+    public SpectreConsoleLogger(string categoryName, EventBus? eventBus = null)
     {
         _categoryName = categoryName;
+        _eventBus = eventBus;
     }
 
     public IDisposable? BeginScope<TState>(TState state) where TState : notnull => null;
@@ -58,6 +68,16 @@ public class SpectreConsoleLogger : ILogger
         var logOutput = Markup.Escape(message);
         
         AnsiConsole.MarkupLine($"[grey][[[/]{time}[grey]]][/] {levelShort} [blue]{categoryShort}[/]: {logOutput}");
+        
+        // Publish to EventBus for web monitoring
+        _eventBus?.Publish(new ScannerEvent
+        {
+            Type = EventType.LogMessage,
+            ScannerName = categoryShort,
+            Message = message,
+            Timestamp = DateTime.UtcNow,
+            LogLevel = logLevel.ToString().ToLower()
+        });
 
         if (exception != null)
         {

@@ -10,7 +10,8 @@ public enum EventType
     ScannerError,
     ScanReceived,
     ApplicationStarted,
-    ApplicationStopped
+    ApplicationStopped,
+    LogMessage
 }
 
 public class ScannerEvent
@@ -21,6 +22,7 @@ public class ScannerEvent
     public DateTime Timestamp { get; set; } = DateTime.UtcNow;
     public string? RemoteEndpoint { get; set; }
     public string? ErrorDetails { get; set; }
+    public string? LogLevel { get; set; }
 }
 
 public class EventBus

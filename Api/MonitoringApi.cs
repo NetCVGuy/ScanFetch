@@ -110,6 +110,43 @@ public class MonitoringApi
             });
         });
 
+        // GET /api/logs/stream - SSE stream для онлайн логов
+        _app.MapGet("/api/logs/stream", async (HttpContext context) =>
+        {
+            context.Response.Headers["Content-Type"] = "text/event-stream";
+            context.Response.Headers["Cache-Control"] = "no-cache";
+            context.Response.Headers["Connection"] = "keep-alive";
+
+            _logger.LogInformation("Новый SSE клиент подключился к логам");
+
+            var reader = _eventBus.Subscribe();
+            
+            try
+            {
+                await foreach (var evt in reader.ReadAllAsync(context.RequestAborted))
+                {
+                    // Отправляем только логи
+                    if (evt.Type == EventType.LogMessage)
+                    {
+                        var json = JsonSerializer.Serialize(new
+                        {
+                            level = evt.LogLevel,
+                            source = evt.ScannerName,
+                            message = evt.Message,
+                            timestamp = evt.Timestamp
+                        });
+
+                        await context.Response.WriteAsync($"data: {json}\n\n");
+                        await context.Response.Body.FlushAsync();
+                    }
+                }
+            }
+            catch (OperationCanceledException)
+            {
+                _logger.LogInformation("SSE клиент отключился от логов");
+            }
+        });
+        
         // GET /api/events - SSE stream для real-time уведомлений
         _app.MapGet("/api/events", async (HttpContext context) =>
         {
@@ -151,14 +188,70 @@ public class MonitoringApi
             return Results.Redirect("/index.html");
         });
         
-        // GET /api/logs - get recent log entries (placeholder for future file reading)
+        // GET /api/logs - get recent log entries from log files
         _app.MapGet("/api/logs", (int? count, string? level) =>
         {
-            // For now, return empty array - can be extended to read from Logs directory
-            return Results.Ok(new
+            var logsDir = Path.Combine(Directory.GetCurrentDirectory(), "Logs");
+            var logs = new List<object>();
+            
+            try
             {
-                logs = new List<object>()
-            });
+                if (Directory.Exists(logsDir))
+                {
+                    var logFiles = Directory.GetFiles(logsDir, "*.txt")
+                        .OrderByDescending(f => File.GetLastWriteTime(f))
+                        .Take(5);
+                    
+                    foreach (var file in logFiles)
+                    {
+                        var lines = File.ReadAllLines(file);
+                        foreach (var line in lines)
+                        {
+                            if (string.IsNullOrWhiteSpace(line)) continue;
+                            
+                            // Parse log level from line format: [HH:mm:ss] LEVEL ...
+                            var logLevel = "info";
+                            if (line.Contains(" ОШБ ")) logLevel = "error";
+                            else if (line.Contains(" ПРД ")) logLevel = "warning";
+                            else if (line.Contains(" ИНФ ")) logLevel = "info";
+                            else if (line.Contains(" ОТЛ ")) logLevel = "debug";
+                            
+                            if (string.IsNullOrEmpty(level) || logLevel == level)
+                            {
+                                logs.Add(new { level = logLevel, message = line, file = Path.GetFileName(file) });
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Ошибка чтения логов");
+            }
+            
+            var result = logs.OrderByDescending(l => l).Take(count ?? 500).ToList();
+            return Results.Ok(new { logs = result });
+        });
+        
+        // POST /api/control/restart - restart application (placeholder)
+        _app.MapPost("/api/control/restart", () =>
+        {
+            _logger.LogWarning("Перезапуск приложения запрошен через API");
+            return Results.Ok(new { message = "Restart command not implemented yet" });
+        });
+        
+        // POST /api/control/stop - stop application (placeholder)
+        _app.MapPost("/api/control/stop", () =>
+        {
+            _logger.LogWarning("Остановка приложения запрошена через API");
+            return Results.Ok(new { message = "Stop command not implemented yet" });
+        });
+        
+        // POST /api/control/start - start application (placeholder)
+        _app.MapPost("/api/control/start", () =>
+        {
+            _logger.LogInformation("Запуск приложения запрошен через API");
+            return Results.Ok(new { message = "Start command not implemented yet" });
         });
     }
 

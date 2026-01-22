@@ -132,7 +132,8 @@ while (true)
                 loggerFactory.CreateLogger<TcpScanner>(),
                 cfg.ListenInterface,
                 cfg.Delimiter,
-                cfg.StartsWithFilter
+                cfg.StartsWithFilter,
+                cfg.RequestIntervalMs
             );
 
             // Подписываемся на события

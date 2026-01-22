@@ -1,0 +1,21 @@
+
+        __
+     __/o \_
+     \____  \
+         /   \
+   __   //\   \
+__/o \-//--\   \_/
+\____  ___  \  |
+     ||   \ |\ |
+    _||   _||_||
+
+    ScanFetch - MORGENSHTERN EDITION
+                                                 
+
+[2026-01-22 16:27:40] [Information] [Program] Запуск ScanFetch...
+[2026-01-22 16:27:40] [Information] [Program] Попытка подключения к 1 сканерам...
+[2026-01-22 16:27:40] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.164.191:2002 (таймаут 20с)...
+[2026-01-22 16:27:40] [Warning] [ScanFetch.Scanners.TcpScanner] Ошибка подключения к 192.168.164.191:2002: An attempt was made to access a socket in a way forbidden by its access permissions.
+[2026-01-22 16:27:40] [Error] [Program] Режим CancelOnAny включен. Прерываем подключение.
+[2026-01-22 16:27:40] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера 192.168.164.191:2002
+[2026-01-22 16:27:40] [Error] [Program] Ошибка подключения одного из сканеров. Нажмите Enter для повтора...

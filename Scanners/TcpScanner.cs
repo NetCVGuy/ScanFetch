@@ -24,19 +24,21 @@ public class TcpScanner : IScanner
     private readonly string? _listenInterface;
     private readonly string? _delimiter; // Custom delimiter
     private readonly string? _startsWithFilter; // Prefix filter
+    private readonly int _requestIntervalMs;
 
     public string Ip { get; }
     public int Port { get; }
     public string Role { get; }
     public event EventHandler<ScanDataEventArgs>? OnDataReceived;
 
-    public TcpScanner(string ip, int port, string role, ILogger<TcpScanner> logger, string? listenInterface = null, string? delimiter = null, string? startsWithFilter = null)
+    public TcpScanner(string ip, int port, string role, ILogger<TcpScanner> logger, string? listenInterface = null, string? delimiter = null, string? startsWithFilter = null, int requestIntervalMs = 100)
     {
         Ip = ip;
         Port = port;
         _logger = logger;
         _listenInterface = listenInterface;
         _startsWithFilter = startsWithFilter;
+        _requestIntervalMs = requestIntervalMs;
         _isServer = string.Equals(role, "Server", StringComparison.OrdinalIgnoreCase);
         Role = role;
 
@@ -488,7 +490,7 @@ public class TcpScanner : IScanner
                      }
                 }
 
-                await Task.Delay(100, _cts.Token);
+                await Task.Delay(_requestIntervalMs, _cts.Token);
             }
         }
         catch (OperationCanceledException)

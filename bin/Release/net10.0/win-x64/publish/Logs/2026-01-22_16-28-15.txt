@@ -1,0 +1,197 @@
+
+        __
+     __/o \_
+     \____  \
+         /   \
+   __   //\   \
+__/o \-//--\   \_/
+\____  ___  \  |
+     ||   \ |\ |
+    _||   _||_||
+
+    ScanFetch - MORGENSHTERN EDITION
+                                                 
+
+[2026-01-22 16:28:15] [Information] [Program] Запуск ScanFetch...
+[2026-01-22 16:28:15] [Information] [Program] Попытка подключения к 1 сканерам...
+[2026-01-22 16:28:15] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.164.191:2002 (таймаут 20с)...
+[2026-01-22 16:28:15] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 192.168.164.191:2002!
+[2026-01-22 16:28:15] [Information] [ScanFetch.Scanners.TcpScanner] Режим разделителя: Пользовательский [';'] (Hex: 3B)
+[2026-01-22 16:28:15] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 192.168.164.191:2002
+[2026-01-22 16:28:15] [Information] [Program] Все сканеры успешно подключены и работают.
+[2026-01-22 16:28:18] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: eblan;eblan;eblan;eblan;eblan;eblan;eblan;eblan;
+[2026-01-22 16:28:18] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: eblan (Timestamp: 1769088498) (Scanner: MainScanner, Remote: [::ffff:192.168.164.191]:2002)
+[2026-01-22 16:28:19] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: eblan;eblan;eblan;eblan;eblan;eblan;eblan;eblan;
+[2026-01-22 16:28:19] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: eblan;eblan;eblan;eblan;eblan;eblan;eblan;eblan;
+[2026-01-22 16:28:19] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: eblan;eblan;eblan;eblan;eblan;eblan;eblan;eblan;
+[2026-01-22 16:28:19] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: eblan;eblan;eblan;eblan;eblan;eblan;eblan;eblan;
+[2026-01-22 16:28:19] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: eblan;eblan;eblan;eblan;eblan;eblan;eblan;eblan;
+[2026-01-22 16:28:20] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: eblan;eblan;eblan;eblan;eblan;eblan;eblan;eblan;
+[2026-01-22 16:28:20] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: eblan;eblan;eblan;eblan;eblan;eblan;eblan;eblan;
+[2026-01-22 16:28:20] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: eblan;eblan;eblan;eblan;eblan;eblan;eblan;eblan;
+[2026-01-22 16:28:20] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: eblan;eblan;eblan;eblan;eblan;eblan;eblan;eblan;
+[2026-01-22 16:28:21] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: eblan;eblan;eblan;eblan;eblan;eblan;eblan;eblan;
+[2026-01-22 16:28:21] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: eblan;eblan;eblan;eblan;eblan;eblan;eblan;eblan;
+[2026-01-22 16:28:21] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: eblan;eblan;eblan;eblan;eblan;eblan;eblan;eblan;
+[2026-01-22 16:28:21] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: eblan;eblan;eblan;eblan;eblan;eblan;eblan;eblan;
+[2026-01-22 16:28:21] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: eblan;eblan;eblan;eblan;eblan;eblan;eblan;eblan;
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: OK
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.0с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.0с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.0с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: eblan;eblan;eblan;eblan;eblan;eblan;eblan;eblan;
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.2с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.2с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.2с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.2с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.2с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.2с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.2с назад): eblan
+[2026-01-22 16:28:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.2с назад): eblan
+[2026-01-22 16:28:31] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: eblan;eblan;eblan;eblan;eblan;eblan;eblan;eblan;
+[2026-01-22 16:28:31] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 12.4с назад): eblan
+[2026-01-22 16:28:31] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 12.4с назад): eblan
+[2026-01-22 16:28:31] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 12.4с назад): eblan
+[2026-01-22 16:28:31] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 12.4с назад): eblan
+[2026-01-22 16:28:31] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 12.4с назад): eblan
+[2026-01-22 16:28:31] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 12.4с назад): eblan
+[2026-01-22 16:28:31] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 12.4с назад): eblan
+[2026-01-22 16:28:31] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 12.4с назад): eblan
+[2026-01-22 16:28:53] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M004
+[2026-01-22 16:28:53] [Information] [ScanFetch.Scanners.TcpScanner] TIMEOUT FLUSH (Client): Данные без разделителя 192.168.164.191:2002: Z3A537M004
+[2026-01-22 16:28:53] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537M004 (Timestamp: 1769088533) (Scanner: MainScanner, Remote: [::ffff:192.168.164.191]:2002)
+[2026-01-22 16:28:53] [Error] [ScanFetch.Services.GoogleSheetsWebhook] Ошибка при отправке в Google Sheets
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](Memory`1 buffer, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.<CheckUsabilityOnScavenge>g__ReadAheadWithZeroByteReadAsync|39_0()
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at ScanFetch.Services.GoogleSheetsWebhook.SendToGoogleSheetsAsync(String code, String scannerName, String remote) in D:\ПРОЕКТЫ\VSPRJ\ScanFetch\Services\GoogleSheetsWebhook.cs:line 180

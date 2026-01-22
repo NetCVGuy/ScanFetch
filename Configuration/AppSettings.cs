@@ -57,4 +57,6 @@ public class ScannerSettings
     // If null/empty, defaults to auto-detecting \r or \n.
     public string? Delimiter { get; set; }
     public string? StartsWithFilter { get; set; }
+    // Интервал запросов к серверу в миллисекундах (для режима Client)
+    public int RequestIntervalMs { get; set; } = 50;
 }

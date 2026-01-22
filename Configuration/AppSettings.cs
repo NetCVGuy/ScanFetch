@@ -53,4 +53,8 @@ public class ScannerSettings
     // Optional: name or IP of the local interface to bind when running in Server role.
     // If set, the server will bind to this interface non-interactively.
     public string? ListenInterface { get; set; }
+    // Optional: custom delimiter string to split scans (e.g. "\r", ";"). 
+    // If null/empty, defaults to auto-detecting \r or \n.
+    public string? Delimiter { get; set; }
+    public string? StartsWithFilter { get; set; }
 }

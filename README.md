@@ -67,7 +67,7 @@ This project is a migration of `scan.py` to .NET 10.0.
 
 **Запуск / Running**
 
-1. Убедитесь, что в системе установлен .NET SDK.
+1. Убедитесь, что в системе установлен .NET10 SDK.
 2. Отредактируйте [appsettings.json](appsettings.json) согласно вашей среде.
 3. Запустите:
 

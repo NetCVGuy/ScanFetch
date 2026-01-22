@@ -344,6 +344,12 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "Microsoft.NET.ILLink.Tasks/10.0.1": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
       "Spectre.Console/0.49.1": {
         "type": "package",
         "compile": {
@@ -699,6 +705,12 @@
         },
         "build": {
           "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.NET.ILLink.Tasks/10.0.1": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
       "Spectre.Console/0.49.1": {
@@ -1271,6 +1283,56 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Microsoft.NET.ILLink.Tasks/10.0.1": {
+      "sha512": "ISahzLHsHY7vrwqr2p1YWZ+gsxoBRtH7gWRDK8fDUst9pp2He0GiesaqEfeX0V8QMCJM3eNEHGGpnIcPjFo2NQ==",
+      "type": "package",
+      "path": "microsoft.net.illink.tasks/10.0.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "Sdk/Sdk.props",
+        "THIRD-PARTY-NOTICES.TXT",
+        "analyzers/dotnet/cs/ILLink.CodeFixProvider.dll",
+        "analyzers/dotnet/cs/ILLink.RoslynAnalyzer.dll",
+        "build/Microsoft.NET.ILLink.Analyzers.props",
+        "build/Microsoft.NET.ILLink.Tasks.props",
+        "build/Microsoft.NET.ILLink.targets",
+        "microsoft.net.illink.tasks.10.0.1.nupkg.sha512",
+        "microsoft.net.illink.tasks.nuspec",
+        "tools/net/ILLink.Tasks.deps.json",
+        "tools/net/ILLink.Tasks.dll",
+        "tools/net/Mono.Cecil.Mdb.dll",
+        "tools/net/Mono.Cecil.Pdb.dll",
+        "tools/net/Mono.Cecil.Rocks.dll",
+        "tools/net/Mono.Cecil.dll",
+        "tools/net/Sdk/Sdk.props",
+        "tools/net/build/Microsoft.NET.ILLink.Analyzers.props",
+        "tools/net/build/Microsoft.NET.ILLink.Tasks.props",
+        "tools/net/build/Microsoft.NET.ILLink.targets",
+        "tools/net/illink.deps.json",
+        "tools/net/illink.dll",
+        "tools/net/illink.runtimeconfig.json",
+        "tools/netframework/ILLink.Tasks.dll",
+        "tools/netframework/ILLink.Tasks.dll.config",
+        "tools/netframework/Mono.Cecil.Mdb.dll",
+        "tools/netframework/Mono.Cecil.Pdb.dll",
+        "tools/netframework/Mono.Cecil.Rocks.dll",
+        "tools/netframework/Mono.Cecil.dll",
+        "tools/netframework/Sdk/Sdk.props",
+        "tools/netframework/System.Buffers.dll",
+        "tools/netframework/System.Collections.Immutable.dll",
+        "tools/netframework/System.Memory.dll",
+        "tools/netframework/System.Numerics.Vectors.dll",
+        "tools/netframework/System.Reflection.Metadata.dll",
+        "tools/netframework/System.Runtime.CompilerServices.Unsafe.dll",
+        "tools/netframework/build/Microsoft.NET.ILLink.Analyzers.props",
+        "tools/netframework/build/Microsoft.NET.ILLink.Tasks.props",
+        "tools/netframework/build/Microsoft.NET.ILLink.targets",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Spectre.Console/0.49.1": {
       "sha512": "USV+pdu49OJ3nCjxNuw1K9Zw/c1HCBbwbjXZp0EOn6wM99tFdAtN34KEBZUMyRuJuXlUMDqhd8Yq9obW2MslYA==",
       "type": "package",
@@ -1301,28 +1363,36 @@
       "Microsoft.Extensions.Logging >= 9.0.0",
       "Microsoft.Extensions.Logging.Configuration >= 9.0.0",
       "Microsoft.Extensions.Logging.Console >= 9.0.0",
+      "Microsoft.NET.ILLink.Tasks >= 10.0.1",
       "Spectre.Console >= 0.49.1"
     ]
   },
   "packageFolders": {
-    "/home/zahar/.nuget/packages/": {}
+    "C:\\Users\\local\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/ScanFetch.csproj",
+      "projectUniqueName": "D:\\ПРОЕКТЫ\\VSPRJ\\ScanFetch\\ScanFetch.csproj",
       "projectName": "ScanFetch",
-      "projectPath": "/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/ScanFetch.csproj",
-      "packagesPath": "/home/zahar/.nuget/packages/",
-      "outputPath": "/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/obj/",
+      "projectPath": "D:\\ПРОЕКТЫ\\VSPRJ\\ScanFetch\\ScanFetch.csproj",
+      "packagesPath": "C:\\Users\\local\\.nuget\\packages\\",
+      "outputPath": "D:\\ПРОЕКТЫ\\VSPRJ\\ScanFetch\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/home/zahar/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\local\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1375,6 +1445,12 @@
             "target": "Package",
             "version": "[9.0.0, )"
           },
+          "Microsoft.NET.ILLink.Tasks": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[10.0.1, )",
+            "autoReferenced": true
+          },
           "Spectre.Console": {
             "target": "Package",
             "version": "[0.49.1, )"
@@ -1393,8 +1469,16 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[10.0.2, 10.0.2]"
+            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+            "version": "[10.0.1, 10.0.1]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.win-x64",
+            "version": "[10.0.1, 10.0.1]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+            "version": "[10.0.1, 10.0.1]"
           }
         ],
         "frameworkReferences": {
@@ -1402,7 +1486,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/zahar/.dotnet/sdk/10.0.102/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

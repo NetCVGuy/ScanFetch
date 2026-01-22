@@ -1,0 +1,71 @@
+
+        __
+     __/o \_
+     \____  \
+         /   \
+   __   //\   \
+__/o \-//--\   \_/
+\____  ___  \  |
+     ||   \ |\ |
+    _||   _||_||
+
+    ScanFetch - MORGENSHTERN EDITION
+                                                 
+
+[2026-01-14 09:48:38] [Information] [Program] Запуск ScanFetch...
+[2026-01-14 09:48:38] [Information] [Program] Попытка подключения к 2 сканерам...
+[2026-01-14 09:48:38] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.164.191:23 (таймаут 20с)...
+[2026-01-14 09:48:38] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 192.168.164.191:23!
+[2026-01-14 09:48:38] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 192.168.164.191:23
+[2026-01-14 09:48:38] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.164.187:23 (таймаут 20с)...
+[2026-01-14 09:48:38] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 192.168.164.187:23!
+[2026-01-14 09:48:38] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 192.168.164.187:23
+[2026-01-14 09:48:38] [Information] [Program] Все сканеры успешно подключены и работают.
+[2026-01-14 09:48:52] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Записан файл скана: D:\Scans\2026-01-14_09-48-52-922.txt
+[2026-01-14 09:48:53] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Записан файл скана: D:\Scans\2026-01-14_09-48-53-031.txt
+[2026-01-14 09:48:53] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Записан файл скана: D:\Scans\2026-01-14_09-48-53-163.txt
+[2026-01-14 09:48:53] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): l
+[2026-01-14 09:48:53] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Записан файл скана: D:\Scans\2026-01-14_09-48-53-629.txt
+[2026-01-14 09:48:56] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Записан файл скана: D:\Scans\2026-01-14_09-48-56-073.txt
+[2026-01-14 09:49:16] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Записан файл скана: D:\Scans\2026-01-14_09-49-16-019.txt
+[2026-01-14 09:49:24] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:49:24] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:49:24] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:49:24] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:49:24] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:49:24] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:49:25] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:49:25] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:49:25] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:49:25] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:49:25] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:49:25] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:49:26] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:49:26] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:50:41] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:50:41] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:50:42] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:50:42] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:50:42] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:50:42] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:50:42] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:50:42] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:50:43] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:50:43] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:50:43] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:50:43] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:50:43] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:50:43] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:50:44] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:50:44] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:50:44] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): eto ne server
+[2026-01-14 09:50:52] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Записан файл скана: D:\Scans\2026-01-14_09-50-52-041.txt
+[2026-01-14 09:50:54] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Записан файл скана: D:\Scans\2026-01-14_09-50-54-708.txt
+[2026-01-14 09:51:03] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Записан файл скана: D:\Scans\2026-01-14_09-51-02-983.txt
+[2026-01-14 09:51:21] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): h
+[2026-01-14 09:51:23] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): e
+[2026-01-14 09:51:23] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): l
+[2026-01-14 09:51:23] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): l
+[2026-01-14 09:51:23] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (в кеше): o
+[2026-01-14 09:51:46] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Записан файл скана: D:\Scans\2026-01-14_09-51-46-992.txt
+[2026-01-14 09:51:47] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Записан файл скана: D:\Scans\2026-01-14_09-51-47-312.txt

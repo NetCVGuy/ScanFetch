@@ -25,6 +25,8 @@ public class GoogleSheetsWebhook
     private readonly bool _enableFileOutput;
     private readonly bool _enableGoogleSheets;
 
+    private DateTime _lastCleanupTime = DateTime.MinValue; // To throttle cleanup operations
+
     public GoogleSheetsWebhook(
         string webhookUrl,
         double cacheRetentionSeconds,
@@ -63,15 +65,32 @@ public class GoogleSheetsWebhook
                 return;
             }
 
-            // Проверка на дубликат в кеше
-            if (_lastScans.ContainsKey(code))
+            var now = DateTime.Now;
+
+            // Периодическая очистка кеша (утечка памяти)
+            // Запускаем очистку если прошло больше времени удержания с последней чистки, чтобы не перебирать словарь на каждом скане
+            if (now - _lastCleanupTime > TimeSpan.FromSeconds(_cacheRetentionSeconds > 100 ? _cacheRetentionSeconds : 60))
             {
-                _logger.LogInformation("Дубликат (в кеше): {Code}", code);
-                return;
+                CleanupCache(now);
+                _lastCleanupTime = now;
             }
 
-            // Добавляем текущую запись
-            _lastScans[code] = DateTime.Now;
+            // Проверка на дубликат в кеше с учетом времени удержания
+            if (_lastScans.TryGetValue(code, out var lastSeen))
+            {
+                if ((now - lastSeen).TotalSeconds < _cacheRetentionSeconds)
+                {
+                    _logger.LogInformation("Дубликат (игнорируется, {Sec:F1}с назад): {Code}", (now - lastSeen).TotalSeconds, code);
+                    return;
+                }
+                else
+                {
+                   _logger.LogDebug("Дубликат обнаружен, но время удержания истекло. Считаем новым: {Code}", code);
+                }
+            }
+
+            // Добавляем/Обновляем текущую запись
+            _lastScans[code] = now;
 
             // Выполняем операции записи независимо (файлы и/или Google Sheets)
             var tasks = new List<Task>();
@@ -166,6 +185,35 @@ public class GoogleSheetsWebhook
         catch (Exception ex)
         {
             _logger.LogError(ex, "Ошибка при отправке в Google Sheets");
+        }
+    }
+
+    private void CleanupCache(DateTime now)
+    {
+        try
+        {
+            var keysToRemove = new List<string>();
+            foreach (var kvp in _lastScans)
+            {
+                if ((now - kvp.Value).TotalSeconds > _cacheRetentionSeconds)
+                {
+                    keysToRemove.Add(kvp.Key);
+                }
+            }
+
+            foreach (var key in keysToRemove)
+            {
+                _lastScans.Remove(key);
+            }
+
+            if (keysToRemove.Count > 0)
+            {
+                _logger.LogDebug("Очистка кеша: удалено {Count} устаревших записей.", keysToRemove.Count);
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Ошибка при очистке кеша");
         }
     }
 }

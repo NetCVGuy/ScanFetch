@@ -107,6 +107,12 @@ catch (Exception ex)
 
 while (true)
 {
+    // Re-bind configuration to support hot-reload of settings (including scanners)
+    // We need to reload the section to get fresh values
+    configuration.Reload(); 
+    appSettings = configuration.Get<AppSettings>() ?? new AppSettings();
+    systemSettings = appSettings.System ?? new SystemSettings();
+
     // Cоздаем список сканеров заново при каждой попытке
     var scanners = new List<TcpScanner>();
     var connectedTasks = new List<Task>();
@@ -124,7 +130,9 @@ while (true)
                 cfg.Port,
                 cfg.Role,
                 loggerFactory.CreateLogger<TcpScanner>(),
-                cfg.ListenInterface
+                cfg.ListenInterface,
+                cfg.Delimiter,
+                cfg.StartsWithFilter
             );
 
             // Подписываемся на события

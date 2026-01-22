@@ -1,0 +1,125 @@
+
+        __
+     __/o \_
+     \____  \
+         /   \
+   __   //\   \
+__/o \-//--\   \_/
+\____  ___  \  |
+     ||   \ |\ |
+    _||   _||_||
+
+    ScanFetch - MORGENSHTERN EDITION
+                                                 
+
+[2026-01-21 08:47:55] [Information] [Program] Запуск ScanFetch...
+[2026-01-21 08:47:55] [Information] [Program] Попытка подключения к 2 сканерам...
+[2026-01-21 08:47:55] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.0.10:2002 (таймаут 20с)...
+[2026-01-21 08:47:55] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 192.168.0.10:2002!
+[2026-01-21 08:47:55] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 192.168.0.10:2002
+[2026-01-21 08:47:55] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.0.9:2002 (таймаут 20с)...
+[2026-01-21 08:47:55] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 192.168.0.9:2002!
+[2026-01-21 08:47:55] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 192.168.0.9:2002
+[2026-01-21 08:47:55] [Information] [Program] Все сканеры успешно подключены и работают.
+[2026-01-21 08:47:59] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK090930<CR><LF>
+[2026-01-21 08:47:59] [Information] [ScanFetch.Scanners.TcpScanner] TIMEOUT FLUSH (Client): Данные без разделителя 192.168.0.10:2002: Z2A42BK090930
+[2026-01-21 08:47:59] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z2A42BK090930 (Timestamp: 1768974479) (Scanner: MainScanner, Remote: [::ffff:192.168.0.10]:2002)
+[2026-01-21 08:47:59] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK090930<CR><LF>Z2A42BK090930<CR><LF>
+[2026-01-21 08:47:59] [Information] [ScanFetch.Scanners.TcpScanner] TIMEOUT FLUSH (Client): Данные без разделителя 192.168.0.10:2002: Z2A42BK090930
+Z2A42BK090930
+[2026-01-21 08:48:00] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK090930<CR><LF>
+[2026-01-21 08:48:00] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK090930<CR><LF>Z2A42BK090930<CR><LF>Z2A42BK090930<CR><LF>
+[2026-01-21 08:48:00] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK090930<CR><LF>Z2A42BK090930<CR><LF>Z2A42BK090930<CR><LF>Z2A42BK090930<CR><LF>
+[2026-01-21 08:48:00] [Information] [ScanFetch.Scanners.TcpScanner] TIMEOUT FLUSH (Client): Данные без разделителя 192.168.0.10:2002: Z2A42BK090930
+Z2A42BK090930
+Z2A42BK090930
+Z2A42BK090930
+[2026-01-21 08:48:04] [Error] [ScanFetch.Services.GoogleSheetsWebhook] Ошибка при отправке в Google Sheets
+System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: The I/O operation has been aborted because of either a thread exit or an application request..
+ ---> System.Net.Sockets.SocketException (995): The I/O operation has been aborted because of either a thread exit or an application request.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](Memory`1 buffer, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.<SendAsync>g__CreateHandlerAndSendAsync|115_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at ScanFetch.Services.GoogleSheetsWebhook.SendToGoogleSheetsAsync(String code, String scannerName, String remote) in D:\ПРОЕКТЫ\VSPRJ\ScanFetch\Services\GoogleSheetsWebhook.cs:line 180
+[2026-01-21 08:48:04] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z2A42BK090930
+Z2A42BK090930 (Timestamp: 1768974484) (Scanner: MainScanner, Remote: [::ffff:192.168.0.10]:2002)
+[2026-01-21 08:48:09] [Error] [ScanFetch.Services.GoogleSheetsWebhook] Ошибка при отправке в Google Sheets
+System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: The I/O operation has been aborted because of either a thread exit or an application request..
+ ---> System.Net.Sockets.SocketException (995): The I/O operation has been aborted because of either a thread exit or an application request.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](Memory`1 buffer, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at ScanFetch.Services.GoogleSheetsWebhook.SendToGoogleSheetsAsync(String code, String scannerName, String remote) in D:\ПРОЕКТЫ\VSPRJ\ScanFetch\Services\GoogleSheetsWebhook.cs:line 180
+[2026-01-21 08:48:09] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z2A42BK090930
+Z2A42BK090930
+Z2A42BK090930
+Z2A42BK090930 (Timestamp: 1768974489) (Scanner: MainScanner, Remote: [::ffff:192.168.0.10]:2002)
+[2026-01-21 08:48:14] [Error] [ScanFetch.Services.GoogleSheetsWebhook] Ошибка при отправке в Google Sheets
+System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: The I/O operation has been aborted because of either a thread exit or an application request..
+ ---> System.Net.Sockets.SocketException (995): The I/O operation has been aborted because of either a thread exit or an application request.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](Memory`1 buffer, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at ScanFetch.Services.GoogleSheetsWebhook.SendToGoogleSheetsAsync(String code, String scannerName, String remote) in D:\ПРОЕКТЫ\VSPRJ\ScanFetch\Services\GoogleSheetsWebhook.cs:line 180
+[2026-01-21 08:50:24] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK090930<CR><LF>
+[2026-01-21 08:50:24] [Information] [ScanFetch.Scanners.TcpScanner] TIMEOUT FLUSH (Client): Данные без разделителя 192.168.0.10:2002: Z2A42BK090930
+[2026-01-21 08:50:24] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 144.9с назад): Z2A42BK090930
+[2026-01-21 08:50:24] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK090930<CR><LF>Z2A42BK090930<CR><LF>
+[2026-01-21 08:50:24] [Information] [ScanFetch.Scanners.TcpScanner] TIMEOUT FLUSH (Client): Данные без разделителя 192.168.0.10:2002: Z2A42BK090930
+Z2A42BK090930
+[2026-01-21 08:50:24] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 140.0с назад): Z2A42BK090930
+Z2A42BK090930
+[2026-01-21 08:50:24] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK090930<CR><LF>
+[2026-01-21 08:50:25] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK090930<CR><LF>Z2A42BK090930<CR><LF>
+[2026-01-21 08:50:25] [Information] [ScanFetch.Scanners.TcpScanner] TIMEOUT FLUSH (Client): Данные без разделителя 192.168.0.10:2002: Z2A42BK090930
+Z2A42BK090930
+[2026-01-21 08:50:25] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 140.3с назад): Z2A42BK090930
+Z2A42BK090930

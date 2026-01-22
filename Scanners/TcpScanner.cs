@@ -22,20 +22,55 @@ public class TcpScanner : IScanner
     private CancellationTokenSource? _cts;
     private readonly bool _isServer;
     private readonly string? _listenInterface;
+    private readonly string? _delimiter; // Custom delimiter
+    private readonly string? _startsWithFilter; // Prefix filter
 
     public string Ip { get; }
     public int Port { get; }
     public string Role { get; }
     public event EventHandler<ScanDataEventArgs>? OnDataReceived;
 
-    public TcpScanner(string ip, int port, string role, ILogger<TcpScanner> logger, string? listenInterface = null)
+    public TcpScanner(string ip, int port, string role, ILogger<TcpScanner> logger, string? listenInterface = null, string? delimiter = null, string? startsWithFilter = null)
     {
         Ip = ip;
         Port = port;
         _logger = logger;
         _listenInterface = listenInterface;
+        _startsWithFilter = startsWithFilter;
         _isServer = string.Equals(role, "Server", StringComparison.OrdinalIgnoreCase);
         Role = role;
+
+        if (!string.IsNullOrWhiteSpace(delimiter))
+        {
+            if (delimiter.StartsWith("0x", StringComparison.OrdinalIgnoreCase))
+            {
+                // Hex format: 0x0D0A
+                try
+                {
+                    var hex = delimiter.Substring(2);
+                    var bytes = Convert.FromHexString(hex);
+                    _delimiter = Encoding.UTF8.GetString(bytes);
+                }
+                catch (Exception ex) 
+                {
+                    _logger.LogWarning("Не удалось распарсить HEX разделитель '{Delim}': {Msg}. Использую как текст.", delimiter, ex.Message);
+                    _delimiter = delimiter;
+                }
+            }
+            else
+            {
+                // Text format with escaping support
+                _delimiter = delimiter
+                    .Replace("\\r", "\r")
+                    .Replace("\\n", "\n")
+                    .Replace("\\t", "\t")
+                    .Replace("\\0", "\0");
+            }
+        }
+        else
+        {
+            _delimiter = null;
+        }
     }
 
     public async Task ConnectAsync(int timeoutSeconds)
@@ -90,6 +125,13 @@ public class TcpScanner : IScanner
     public async Task StartListeningAsync()
     {
         _cts = new CancellationTokenSource();
+
+        if (!string.IsNullOrEmpty(_delimiter))
+            _logger.LogInformation("Режим разделителя: Пользовательский ['{Delim}'] (Hex: {Hex})", 
+                _delimiter.Replace("\r", "<CR>").Replace("\n", "<LF>"),
+                BitConverter.ToString(Encoding.UTF8.GetBytes(_delimiter)));
+        else
+            _logger.LogInformation("Режим разделителя: Автоматический (CR/LF)");
 
         // Server mode: accept clients repeatedly and handle each until disconnect/error, then accept again.
         if (_isServer)
@@ -175,6 +217,8 @@ public class TcpScanner : IScanner
                     _logger.LogInformation("Клиент подключился (Remote: {Remote})", clientRemoteEp);
 
                     var buffer = new byte[1024];
+                    var sb = new StringBuilder(); // Buffer for fragmentation
+
                     while (!_cts.Token.IsCancellationRequested)
                     {
                         int bytesRead = await clientStream.ReadAsync(buffer, _cts.Token);
@@ -182,14 +226,125 @@ public class TcpScanner : IScanner
                         {
                             var remoteEp = client?.Client?.RemoteEndPoint;
                             _logger.LogWarning("Клиент отключился (Remote: {Remote})", remoteEp);
+
+                            // Flush remaining buffer on disconnect
+                            if (sb.Length > 0)
+                            {
+                                var leftovers = sb.ToString().Trim();
+                                if (!string.IsNullOrWhiteSpace(leftovers))
+                                {
+                                    _logger.LogWarning("В буфере остались данные без разделителя, считаем это сканом: {Code}", leftovers);
+                                    OnDataReceived?.Invoke(this, new ScanDataEventArgs { Code = leftovers, Timestamp = DateTime.Now, RemoteEndPoint = remoteEp?.ToString() });
+                                }
+                            }
                             break;
                         }
 
-                            var code = Encoding.UTF8.GetString(buffer, 0, bytesRead).Trim();
-                            var remote = client?.Client?.RemoteEndPoint?.ToString();
-                            _logger.LogInformation("Получено на порту {Port} от {Remote}: {Code}", Port, remote, code);
+                        // Debug log to show raw data arrived
+                        var rawChunk = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+                        // Используем LogInformation чтобы точно видеть приходящие байты в консоли
+                        _logger.LogInformation("[RAW] Принято {Bytes} байт: {RawHex} | Текст: {Ascii}", 
+                            bytesRead, 
+                            BitConverter.ToString(buffer, 0, bytesRead), 
+                            rawChunk.Replace("\r", "<CR>").Replace("\n", "<LF>"));
 
-                            OnDataReceived?.Invoke(this, new ScanDataEventArgs { Code = code, Timestamp = DateTime.Now, RemoteEndPoint = remote });
+                        // Append received chunk
+                        sb.Append(rawChunk);
+                        
+                        // Если в буфере нет разделителей, предупреждаем один раз (или можно в дебаг)
+                        if (sb.Length > 0 && !rawChunk.Contains('\n') && !rawChunk.Contains('\r'))
+                        {
+                            _logger.LogDebug("Данные в буфере ({Length} байт), ждем разделитель (CR/LF)...", sb.Length);
+                        }
+
+                        // Process complete lines
+                        string currentData = sb.ToString();
+
+                        while (true)
+                        {
+                            int cutIndex = -1;
+                            int jump = 0;
+
+                            // Custom delimiter logic
+                            if (!string.IsNullOrEmpty(_delimiter))
+                            {
+                                int idx = currentData.IndexOf(_delimiter);
+                                if (idx != -1)
+                                {
+                                    cutIndex = idx;
+                                    jump = _delimiter.Length;
+                                }
+                            }
+                            // Default logic (\r or \n)
+                            else 
+                            { 
+                                int rIndex = currentData.IndexOf('\r');
+                                int nIndex = currentData.IndexOf('\n');
+
+                                if (rIndex != -1 && nIndex != -1) cutIndex = Math.Min(rIndex, nIndex);
+                                else if (rIndex != -1) cutIndex = rIndex;
+                                else if (nIndex != -1) cutIndex = nIndex;
+
+                                if (cutIndex != -1)
+                                {
+                                    jump = 1;
+                                    if (currentData[cutIndex] == '\r' && cutIndex + 1 < currentData.Length && currentData[cutIndex + 1] == '\n')
+                                    {
+                                        jump = 2;
+                                    }
+                                }
+                            }
+
+                            if (cutIndex == -1) break;
+
+                             var code = currentData.Substring(0, cutIndex).Trim();
+                             
+                             currentData = currentData.Substring(cutIndex + jump);
+                             sb.Clear();
+                             sb.Append(currentData);
+                             
+                             if (!string.IsNullOrWhiteSpace(code))
+                             {
+                                if (!string.IsNullOrEmpty(_startsWithFilter) && !code.StartsWith(_startsWithFilter))
+                                {
+                                    _logger.LogTrace("Скан '{Code}' отфильтрован (не начинается с '{Filter}')", code, _startsWithFilter);
+                                }
+                                else
+                                {
+                                    var remote = client?.Client?.RemoteEndPoint?.ToString();
+                                    _logger.LogInformation("Получено на порту {Port} от {Remote}: {Code}", Port, remote, code);
+                                    OnDataReceived?.Invoke(this, new ScanDataEventArgs { Code = code, Timestamp = DateTime.Now, RemoteEndPoint = remote });
+                                }
+                             }
+                        }
+
+                        // ТАЙМАУТ-ФЛАШ (для сканеров без разделителей)
+                        // Если в буфере что-то есть, но разделителя мы так и не нашли
+                        if (sb.Length > 0 && !clientStream.DataAvailable)
+                        {
+                            // Подождем немного, вдруг хвост пакета долетает
+                            await Task.Delay(50, _cts.Token); 
+                            
+                            // Если всё еще нет данных
+                            if (!clientStream.DataAvailable)
+                            {
+                                var leftovers = sb.ToString().Trim();
+                                if (!string.IsNullOrWhiteSpace(leftovers))
+                                {
+                                     if (!string.IsNullOrEmpty(_startsWithFilter) && !leftovers.StartsWith(_startsWithFilter))
+                                     {
+                                         _logger.LogTrace("TIMEOUT FLUSH: Скан '{Code}' отфильтрован (не начинается с '{Filter}')", leftovers, _startsWithFilter);
+                                     }
+                                     else
+                                     {
+                                         var remote = client?.Client?.RemoteEndPoint?.ToString();
+                                         _logger.LogInformation("TIMEOUT FLUSH (Server): Данные приняты без разделителя {Ip}:{Port}: {Code}", Ip, Port, leftovers);
+                                         OnDataReceived?.Invoke(this, new ScanDataEventArgs { Code = leftovers, Timestamp = DateTime.Now, RemoteEndPoint = remote });
+                                     }
+                                }
+                                sb.Clear();
+                            }
+                        }
                     }
                 }
                 catch (OperationCanceledException)
@@ -218,6 +373,8 @@ public class TcpScanner : IScanner
             throw new InvalidOperationException("Сначала вызови ConnectAsync, бро!");
 
         var bufferClient = new byte[1024];
+        var sbClient = new StringBuilder();
+
         try
         {
             _logger.LogInformation("Запущено прослушивание в режиме клиента {Ip}:{Port}", Ip, Port);
@@ -227,6 +384,9 @@ public class TcpScanner : IScanner
                 var triggerCommand = Encoding.ASCII.GetBytes("TRG\r\n");
                 await _stream.WriteAsync(triggerCommand, _cts.Token);
 
+                // Wait for response (might need loop if fragmented)
+                // For client mode with TRIGGER, usually response is immediate, but better safe.
+                
                 int bytesRead = await _stream.ReadAsync(bufferClient, _cts.Token);
                 if (bytesRead == 0)
                 {
@@ -234,11 +394,99 @@ public class TcpScanner : IScanner
                     break;
                 }
 
-                var code = Encoding.UTF8.GetString(bufferClient, 0, bytesRead).Trim();
-                var remoteClient = _client?.Client?.RemoteEndPoint?.ToString() ?? (Ip + ":" + Port);
-                _logger.LogDebug("Получены данные {Ip}:{Port} (Remote: {Remote}): {Code}", Ip, Port, remoteClient, code);
+                sbClient.Append(Encoding.UTF8.GetString(bufferClient, 0, bytesRead));
+                string currentData = sbClient.ToString();
 
-                OnDataReceived?.Invoke(this, new ScanDataEventArgs { Code = code, Timestamp = DateTime.Now, RemoteEndPoint = remoteClient });
+                 // Debug log visible
+                _logger.LogInformation("[RAW Client] Буфер: {Data}", currentData.Replace("\r", "<CR>").Replace("\n", "<LF>"));
+
+
+                // Process all complete lines available
+                while (true)
+                {
+                    int cutIndex = -1;
+                    int jump = 0;
+
+                    // Custom delimiter logic
+                    if (!string.IsNullOrEmpty(_delimiter))
+                    {
+                        int idx = currentData.IndexOf(_delimiter);
+                        if (idx != -1)
+                        {
+                            cutIndex = idx;
+                            jump = _delimiter.Length;
+                        }
+                    }
+                    // Default logic (\r or \n)
+                    else 
+                    { 
+                        int rIndex = currentData.IndexOf('\r');
+                        int nIndex = currentData.IndexOf('\n');
+
+                        if (rIndex != -1 && nIndex != -1) cutIndex = Math.Min(rIndex, nIndex);
+                        else if (rIndex != -1) cutIndex = rIndex;
+                        else if (nIndex != -1) cutIndex = nIndex;
+
+                        if (cutIndex != -1)
+                        {
+                            jump = 1;
+                            if (currentData[cutIndex] == '\r' && cutIndex + 1 < currentData.Length && currentData[cutIndex + 1] == '\n')
+                            {
+                                jump = 2;
+                            }
+                        }
+                    }
+
+                    if (cutIndex == -1) break;
+
+                    var code = currentData.Substring(0, cutIndex).Trim();
+                    
+                    int jumpReal = jump; // Avoid modifying loop var unexpectedly
+                    currentData = currentData.Substring(cutIndex + jumpReal);
+                    sbClient.Clear();
+                    sbClient.Append(currentData);
+
+                    if (!string.IsNullOrWhiteSpace(code))
+                    {
+                        if (!string.IsNullOrEmpty(_startsWithFilter) && !code.StartsWith(_startsWithFilter))
+                        {
+                            _logger.LogTrace("Скан '{Code}' отфильтрован (не начинается с '{Filter}')", code, _startsWithFilter);
+                        }
+                        else
+                        {
+                            var remoteClient = _client?.Client?.RemoteEndPoint?.ToString() ?? (Ip + ":" + Port);
+                            _logger.LogDebug("Получены данные {Ip}:{Port} (Remote: {Remote}): {Code}", Ip, Port, remoteClient, code);
+                            OnDataReceived?.Invoke(this, new ScanDataEventArgs { Code = code, Timestamp = DateTime.Now, RemoteEndPoint = remoteClient });
+                        }
+                    }
+                }
+
+                // ТАЙМАУТ-ФЛАШ (для режима КЛИЕНТА)
+                // Если мы что-то прочитали, но разделителя не нашли, и в стриме пусто
+                if (sbClient.Length > 0 && !_stream.DataAvailable)
+                {
+                     // Обычно ответ на триггер приходит целиком. 
+                     // Если там нет \r\n, мы обязаны это обработать, иначе застрянем.
+                     await Task.Delay(50, _cts.Token);
+                     if (!_stream.DataAvailable)
+                     {
+                         var content = sbClient.ToString().Trim();
+                         if (!string.IsNullOrWhiteSpace(content))
+                         {
+                             if (!string.IsNullOrEmpty(_startsWithFilter) && !content.StartsWith(_startsWithFilter))
+                             {
+                                 _logger.LogTrace("TIMEOUT FLUSH: Скан '{Code}' отфильтрован (не начинается с '{Filter}')", content, _startsWithFilter);
+                             }
+                             else
+                             {
+                                 var remoteClient = _client?.Client?.RemoteEndPoint?.ToString() ?? (Ip + ":" + Port);
+                                 _logger.LogInformation("TIMEOUT FLUSH (Client): Данные без разделителя {Ip}:{Port}: {Code}", Ip, Port, content);
+                                 OnDataReceived?.Invoke(this, new ScanDataEventArgs { Code = content, Timestamp = DateTime.Now, RemoteEndPoint = remoteClient });
+                             }
+                         }
+                         sbClient.Clear();
+                     }
+                }
 
                 await Task.Delay(100, _cts.Token);
             }

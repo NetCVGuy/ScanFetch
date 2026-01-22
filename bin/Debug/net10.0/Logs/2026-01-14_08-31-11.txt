@@ -1,0 +1,25 @@
+
+        __
+     __/o \_
+     \____  \
+         /   \
+   __   //\   \
+__/o \-//--\   \_/
+\____  ___  \  |
+     ||   \ |\ |
+    _||   _||_||
+
+    ScanFetch - MORGENSHTERN EDITION
+                                                 
+
+[2026-01-14 08:31:12] [Information] [Program] Запуск ScanFetch...
+[2026-01-14 08:31:12] [Information] [Program] Попытка подключения к 1 сканерам...
+[2026-01-14 08:31:12] [Information] [ScanFetch.Scanners.TcpScanner] Режим сервера: подготовка завершена, слушатель будет запущен в StartListeningAsync
+[2026-01-14 08:31:12] [Information] [ScanFetch.Scanners.TcpScanner] Найдено несколько сетевых интерфейсов. Выберите, какой использовать для прослушивания:
+[2026-01-14 08:31:16] [Information] [ScanFetch.Scanners.TcpScanner] Выбрана опция 2: WirelessNet (192.168.164.38)
+[2026-01-14 08:31:16] [Information] [ScanFetch.Scanners.TcpScanner] TCP сервер запущен и слушает на 192.168.164.38:2002
+[2026-01-14 08:31:16] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме сервера на порту 2002
+[2026-01-14 08:31:16] [Information] [Program] 1 сервер(ов) запущено и слушают, но пока нет активных клиентских подключений.
+[2026-01-14 08:31:18] [Information] [ScanFetch.Scanners.TcpScanner] Клиент подключился (Remote: 192.168.164.191:62064)
+[2026-01-14 08:31:19] [Information] [ScanFetch.Scanners.TcpScanner] Получено на порту 2002 от 192.168.164.191:62064: zahar ne sharit
+[2026-01-14 08:31:37] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Записан файл скана: D:\Scans\2026-01-14_08-31-19-679.txt

@@ -33,3 +33,39 @@
 /home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/obj/Debug/net10.0/ScanFetch.pdb
 /home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/obj/Debug/net10.0/ScanFetch.genruntimeconfig.cache
 /home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/obj/Debug/net10.0/ref/ScanFetch.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\appsettings.json
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\ScanFetch.exe
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\ScanFetch.deps.json
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\ScanFetch.runtimeconfig.json
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\ScanFetch.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\ScanFetch.pdb
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Configuration.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Configuration.Abstractions.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Configuration.Binder.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Configuration.Json.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.FileProviders.Physical.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.FileSystemGlobbing.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Logging.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Logging.Abstractions.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Logging.Configuration.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Logging.Console.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Options.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Primitives.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Spectre.Console.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ScanFetch.csproj.AssemblyReference.cache
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ScanFetch.GeneratedMSBuildEditorConfig.editorconfig
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ScanFetch.AssemblyInfoInputs.cache
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ScanFetch.AssemblyInfo.cs
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ScanFetch.csproj.CoreCompileInputs.cache
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ScanFetch.sourcelink.json
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ScanFetch.csproj.Up2Date
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ScanFetch.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\refint\ScanFetch.dll
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ScanFetch.pdb
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ScanFetch.genruntimeconfig.cache
+d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ref\ScanFetch.dll

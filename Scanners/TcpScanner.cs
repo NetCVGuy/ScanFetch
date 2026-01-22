@@ -7,6 +7,7 @@ using System.Text;
 using Microsoft.Extensions.Logging;
 using ScanFetch.Interfaces;
 using ScanFetch.Models;
+using ScanFetch.Services;
 
 namespace ScanFetch.Scanners;
 
@@ -16,6 +17,7 @@ namespace ScanFetch.Scanners;
 public class TcpScanner : IScanner
 {
     private readonly ILogger<TcpScanner> _logger;
+    private readonly EventBus? _eventBus;
     private TcpClient? _client;
     private TcpListener? _listener;
     private NetworkStream? _stream;
@@ -30,13 +32,18 @@ public class TcpScanner : IScanner
     public string Ip { get; }
     public int Port { get; }
     public string Role { get; }
+    public string Name { get; set; } = string.Empty;
+    public bool Enabled { get; set; } = true;
+    public bool IsConnected { get; private set; } = false;
+    public string? RemoteEndpoint { get; private set; }
     public event EventHandler<ScanDataEventArgs>? OnDataReceived;
 
-    public TcpScanner(string ip, int port, string role, ILogger<TcpScanner> logger, string? listenInterface = null, string? delimiter = null, string? startsWithFilter = null, int requestIntervalMs = 100, int timeoutFlushMs = 50)
+    public TcpScanner(string ip, int port, string role, ILogger<TcpScanner> logger, string? listenInterface = null, string? delimiter = null, string? startsWithFilter = null, int requestIntervalMs = 100, int timeoutFlushMs = 50, EventBus? eventBus = null)
     {
         Ip = ip;
         Port = port;
         _logger = logger;
+        _eventBus = eventBus;
         _listenInterface = listenInterface;
         _startsWithFilter = startsWithFilter;
         _requestIntervalMs = requestIntervalMs;
@@ -97,16 +104,38 @@ public class TcpScanner : IScanner
             {
                 await _client.ConnectAsync(Ip, Port).WaitAsync(cts.Token);
                 _stream = _client.GetStream();
+                IsConnected = true;
+                RemoteEndpoint = _client?.Client?.RemoteEndPoint?.ToString();
                 _logger.LogInformation("Подключено к сканеру {Ip}:{Port}!", Ip, Port);
+                _eventBus?.Publish(new ScannerEvent
+                {
+                    Type = EventType.ScannerConnected,
+                    ScannerName = Name,
+                    Message = $"Подключено к {Ip}:{Port}"
+                });
             }
             catch (TimeoutException)
             {
                 _logger.LogWarning("Таймаут подключения к {Ip}:{Port}", Ip, Port);
+                _eventBus?.Publish(new ScannerEvent
+                {
+                    Type = EventType.ScannerError,
+                    ScannerName = Name,
+                    Message = $"Таймаут подключения к {Ip}:{Port}",
+                    ErrorDetails = "Connection timeout"
+                });
                 throw;
             }
             catch (Exception ex)
             {
                 _logger.LogWarning("Ошибка подключения к {Ip}:{Port}: {Message}", Ip, Port, ex.Message);
+                _eventBus?.Publish(new ScannerEvent
+                {
+                    Type = EventType.ScannerError,
+                    ScannerName = Name,
+                    Message = $"Ошибка подключения: {ex.Message}",
+                    ErrorDetails = ex.ToString()
+                });
                 throw;
             }
         }
@@ -115,6 +144,18 @@ public class TcpScanner : IScanner
     public async Task DisconnectAsync()
     {
         _cts?.Cancel();
+
+        _eventBus?.Publish(new ScannerEvent
+        {
+            Type = EventType.ScannerDisconnected,
+            ScannerName = Name,
+            Message = $"Отключение {(IsConnected ? "активное" : "неактивное")}",
+            RemoteEndpoint = RemoteEndpoint
+        });
+        
+        IsConnected = false;
+        RemoteEndpoint = null;
+        
         _stream?.Close();
         _client?.Close();
         if (_listener != null)
@@ -220,6 +261,14 @@ public class TcpScanner : IScanner
                     var clientRemoteEp = client?.Client?.RemoteEndPoint;
                     _logger.LogInformation("Клиент подключился (Remote: {Remote})", clientRemoteEp);
 
+                    _eventBus?.Publish(new ScannerEvent
+                    {
+                        Type = EventType.ScannerConnected,
+                        ScannerName = Name,
+                        Message = $"Клиент подключился",
+                        RemoteEndpoint = clientRemoteEp?.ToString()
+                    });
+
                     var buffer = new byte[1024];
                     var sb = new StringBuilder(); // Buffer for fragmentation
 
@@ -230,6 +279,14 @@ public class TcpScanner : IScanner
                         {
                             var remoteEp = client?.Client?.RemoteEndPoint;
                             _logger.LogWarning("Клиент отключился (Remote: {Remote})", remoteEp);
+
+                            _eventBus?.Publish(new ScannerEvent
+                            {
+                                Type = EventType.ScannerDisconnected,
+                                ScannerName = Name,
+                                Message = "Клиент отключился",
+                                RemoteEndpoint = remoteEp?.ToString()
+                            });
 
                             // Flush remaining buffer on disconnect
                             if (sb.Length > 0)
@@ -358,6 +415,14 @@ public class TcpScanner : IScanner
                 catch (Exception ex)
                 {
                     _logger.LogWarning(ex, "Ошибка при обслуживании клиентского соединения на порту {Port}", Port);
+                    
+                    _eventBus?.Publish(new ScannerEvent
+                    {
+                        Type = EventType.ScannerError,
+                        ScannerName = Name,
+                        Message = $"Ошибка при обслуживании клиента",
+                        ErrorDetails = $"{ex.GetType().Name}: {ex.Message}\n{ex.StackTrace}"
+                    });
                 }
                 finally
                 {

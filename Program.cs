@@ -5,6 +5,7 @@ using ScanFetch.Configuration;
 using ScanFetch.Logging;
 using ScanFetch.Scanners;
 using ScanFetch.Services;
+using ScanFetch.Api;
 using Spectre.Console;
 using ScanFetch;
 
@@ -47,6 +48,16 @@ var loggerFactory = serviceProvider.GetRequiredService<ILoggerFactory>();
 var logger = loggerFactory.CreateLogger<Program>();
 
 logger.LogInformation("Запуск ScanFetch...");
+
+// Создаем EventBus для мониторинга событий
+var eventBus = new EventBus();
+
+// Публикуем событие запуска приложения
+eventBus.Publish(new ScannerEvent
+{
+    Type = EventType.ApplicationStarted,
+    Message = "ScanFetch запущен"
+});
 
 // Создаём Google Sheets сервис
 var googleSheets = new GoogleSheetsWebhook(
@@ -116,6 +127,27 @@ while (true)
     // Cоздаем список сканеров заново при каждой попытке
     var scanners = new List<TcpScanner>();
     var connectedTasks = new List<Task>();
+    
+    // Запускаем Monitoring API если включено
+    MonitoringApi? monitoringApi = null;
+    if (appSettings.MonitoringApi?.Enabled == true)
+    {
+        try
+        {
+            monitoringApi = new MonitoringApi(
+                appSettings.MonitoringApi.Port,
+                eventBus,
+                scanners,
+                loggerFactory
+            );
+            await monitoringApi.StartAsync();
+            logger.LogInformation("Monitoring API запущен на порту {Port}", appSettings.MonitoringApi.Port);
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(ex, "Не удалось запустить Monitoring API");
+        }
+    }
 
     try
     {
@@ -175,8 +207,12 @@ while (true)
                 cfg.Delimiter,
                 cfg.StartsWithFilter,
                 cfg.RequestIntervalMs,
-                cfg.TimeoutFlushMs
+                cfg.TimeoutFlushMs,
+                eventBus
             );
+            
+            scanner.Name = cfg.Name;
+            scanner.Enabled = cfg.Enabled;
 
             // Подписываемся на события
             scanner.OnDataReceived += async (sender, e) =>
@@ -317,5 +353,19 @@ while (true)
         {
             await scanner.DisconnectAsync();
         }
+        
+        // Останавливаем Monitoring API
+        if (monitoringApi != null)
+        {
+            await monitoringApi.StopAsync();
+            logger.LogInformation("Monitoring API остановлен");
+        }
     }
 }
+
+// Публикуем событие остановки приложения (никогда не достигается из-за while(true), но добавим для полноты)
+eventBus.Publish(new ScannerEvent
+{
+    Type = EventType.ApplicationStopped,
+    Message = "ScanFetch остановлен"
+});

@@ -7,6 +7,7 @@ public class AppSettings
 {
     public SystemSettings System { get; set; } = new();
     public GoogleSheetsSettings GoogleSheets { get; set; } = new();
+    public MonitoringApiSettings MonitoringApi { get; set; } = new();
     public List<ScannerSettings> Scanners { get; set; } = new();
 }
 
@@ -43,6 +44,15 @@ public class GoogleSheetsSettings
     // Optional file format template. If set, it overrides prefix/suffix and supports placeholders: {code}, {timestamp}
     public string FileFormat { get; set; } = string.Empty;
     
+}
+
+/// <summary>
+/// Настройки Monitoring API
+/// </summary>
+public class MonitoringApiSettings
+{
+    public bool Enabled { get; set; } = false;
+    public int Port { get; set; } = 5000;
 }
 
 /// <summary>

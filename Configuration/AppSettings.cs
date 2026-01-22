@@ -17,6 +17,12 @@ public class SystemSettings
 {
     public bool CancelOnAny { get; set; } = true;
     public int ScannerTimeoutSeconds { get; set; } = 20;
+    // Auto-retry configuration
+    public bool AutoRetryEnabled { get; set; } = true;
+    public int MaxRetryAttempts { get; set; } = 0; // 0 = infinite retries
+    public int RetryDelaySeconds { get; set; } = 5;
+    // Debug mode - enables interactive parameter configuration
+    public bool DebugMode { get; set; } = false;
 }
 
 /// <summary>
@@ -59,4 +65,7 @@ public class ScannerSettings
     public string? StartsWithFilter { get; set; }
     // Интервал запросов к серверу в миллисекундах (для режима Client)
     public int RequestIntervalMs { get; set; } = 50;
+    // Timeout flush delay in milliseconds (default 50ms)
+    // If buffer has data but no delimiter arrives within this time, flush as complete scan
+    public int TimeoutFlushMs { get; set; } = 50;
 }

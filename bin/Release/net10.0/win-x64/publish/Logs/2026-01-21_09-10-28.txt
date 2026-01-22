@@ -1,68 +1,0 @@
-
-        __
-     __/o \_
-     \____  \
-         /   \
-   __   //\   \
-__/o \-//--\   \_/
-\____  ___  \  |
-     ||   \ |\ |
-    _||   _||_||
-
-    ScanFetch - MORGENSHTERN EDITION
-                                                 
-
-[2026-01-21 09:10:28] [Information] [Program] Запуск ScanFetch...
-[2026-01-21 09:10:28] [Information] [Program] Попытка подключения к 2 сканерам...
-[2026-01-21 09:10:28] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.0.10:2002 (таймаут 20с)...
-[2026-01-21 09:10:48] [Warning] [ScanFetch.Scanners.TcpScanner] Ошибка подключения к 192.168.0.10:2002: A task was canceled.
-[2026-01-21 09:10:48] [Error] [Program] Режим CancelOnAny включен. Прерываем подключение.
-[2026-01-21 09:10:48] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера 192.168.0.10:2002
-[2026-01-21 09:10:48] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера 192.168.0.9:2002
-[2026-01-21 09:10:48] [Error] [Program] Ошибка подключения одного из сканеров. Нажмите Enter для повтора...
-[2026-01-21 09:10:58] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера 192.168.0.10:2002
-[2026-01-21 09:10:58] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера 192.168.0.9:2002
-[2026-01-21 09:10:58] [Information] [Program] Попытка подключения к 2 сканерам...
-[2026-01-21 09:10:58] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.0.10:2002 (таймаут 20с)...
-[2026-01-21 09:10:58] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 192.168.0.10:2002!
-[2026-01-21 09:10:58] [Information] [ScanFetch.Scanners.TcpScanner] Режим разделителя: Пользовательский ['<CR><LF>'] (Hex: 0D-0A)
-[2026-01-21 09:10:58] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 192.168.0.10:2002
-[2026-01-21 09:10:58] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.0.9:2002 (таймаут 20с)...
-[2026-01-21 09:10:58] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 192.168.0.9:2002!
-[2026-01-21 09:10:58] [Information] [ScanFetch.Scanners.TcpScanner] Режим разделителя: Пользовательский ['<CR><LF>'] (Hex: 0D-0A)
-[2026-01-21 09:10:58] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 192.168.0.9:2002
-[2026-01-21 09:10:58] [Information] [Program] Все сканеры успешно подключены и работают.
-[2026-01-21 09:11:33] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK040190<CR><LF>
-[2026-01-21 09:11:33] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z2A42BK040190 (Timestamp: 1768975893) (Scanner: MainScanner, Remote: [::ffff:192.168.0.10]:2002)
-[2026-01-21 09:11:34] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK040190<CR><LF>
-[2026-01-21 09:11:34] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK040190<CR><LF>
-[2026-01-21 09:11:34] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK040190<CR><LF>
-[2026-01-21 09:11:34] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK040190<CR><LF>
-[2026-01-21 09:11:36] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: OK
-[2026-01-21 09:11:36] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): Z2A42BK040190
-[2026-01-21 09:11:36] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): Z2A42BK040190
-[2026-01-21 09:11:36] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): Z2A42BK040190
-[2026-01-21 09:11:36] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.1с назад): Z2A42BK040190
-[2026-01-21 09:12:40] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060770<CR><LF>
-[2026-01-21 09:12:40] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537M060770 (Timestamp: 1768975960) (Scanner: MainScanner, Remote: [::ffff:192.168.0.10]:2002)
-[2026-01-21 09:12:40] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060770<CR><LF>
-[2026-01-21 09:12:41] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060770<CR><LF>
-[2026-01-21 09:12:43] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: OK
-[2026-01-21 09:12:43] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 2.4с назад): Z3A537M060770
-[2026-01-21 09:12:43] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 2.4с назад): Z3A537M060770
-[2026-01-21 09:12:44] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060770<CR><LF>
-[2026-01-21 09:12:44] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.8с назад): Z3A537M060770
-[2026-01-21 09:12:44] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060770<CR><LF>
-[2026-01-21 09:12:44] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.0с назад): Z3A537M060770
-[2026-01-21 09:12:44] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060770<CR><LF>
-[2026-01-21 09:12:44] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060770
-[2026-01-21 09:12:45] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060770<CR><LF>
-[2026-01-21 09:12:45] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.2с назад): Z3A537M060770
-[2026-01-21 09:12:45] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060770<CR><LF>
-[2026-01-21 09:12:45] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.3с назад): Z3A537M060770
-[2026-01-21 09:12:45] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060770<CR><LF>
-[2026-01-21 09:12:45] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.4с назад): Z3A537M060770
-[2026-01-21 09:12:45] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060770<CR><LF>
-[2026-01-21 09:12:45] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.5с назад): Z3A537M060770
-[2026-01-21 09:12:45] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060770<CR><LF>
-[2026-01-21 09:12:45] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.6с назад): Z3A537M060770

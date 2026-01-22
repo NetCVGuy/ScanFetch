@@ -1,0 +1,27 @@
+
+        __
+     __/o \_
+     \____  \
+         /   \
+   __   //\   \
+__/o \-//--\   \_/
+\____  ___  \  |
+     ||   \ |\ |
+    _||   _||_||
+
+    ScanFetch - MORGENSHTERN EDITION
+                                                 
+
+[2026-01-22 22:08:04] [Information] [Program] Запуск ScanFetch...
+[2026-01-22 22:08:10] [Information] [Program] Попытка подключения к 1 сканерам...
+[2026-01-22 22:08:10] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 127.0.0.1:2002 (таймаут 20с)...
+[2026-01-22 22:08:10] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 127.0.0.1:2002!
+[2026-01-22 22:08:10] [Information] [ScanFetch.Scanners.TcpScanner] Режим разделителя: Автоматический (CR/LF)
+[2026-01-22 22:08:10] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 127.0.0.1:2002
+[2026-01-22 22:08:10] [Information] [Program] Все сканеры успешно подключены и работают.
+[2026-01-22 22:08:25] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537<CR><LF>
+[2026-01-22 22:08:25] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537 (Timestamp: 1769108905) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-22 22:08:30] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":3,"col":1}
+[2026-01-22 22:09:09] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M004<CR><LF>
+[2026-01-22 22:09:09] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537M004 (Timestamp: 1769108949) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-22 22:09:13] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":3,"col":1}

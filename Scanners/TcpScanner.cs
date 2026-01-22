@@ -25,13 +25,14 @@ public class TcpScanner : IScanner
     private readonly string? _delimiter; // Custom delimiter
     private readonly string? _startsWithFilter; // Prefix filter
     private readonly int _requestIntervalMs;
+    private readonly int _timeoutFlushMs; // Configurable timeout flush delay
 
     public string Ip { get; }
     public int Port { get; }
     public string Role { get; }
     public event EventHandler<ScanDataEventArgs>? OnDataReceived;
 
-    public TcpScanner(string ip, int port, string role, ILogger<TcpScanner> logger, string? listenInterface = null, string? delimiter = null, string? startsWithFilter = null, int requestIntervalMs = 100)
+    public TcpScanner(string ip, int port, string role, ILogger<TcpScanner> logger, string? listenInterface = null, string? delimiter = null, string? startsWithFilter = null, int requestIntervalMs = 100, int timeoutFlushMs = 50)
     {
         Ip = ip;
         Port = port;
@@ -39,6 +40,7 @@ public class TcpScanner : IScanner
         _listenInterface = listenInterface;
         _startsWithFilter = startsWithFilter;
         _requestIntervalMs = requestIntervalMs;
+        _timeoutFlushMs = timeoutFlushMs;
         _isServer = string.Equals(role, "Server", StringComparison.OrdinalIgnoreCase);
         Role = role;
 
@@ -325,7 +327,7 @@ public class TcpScanner : IScanner
                         if (sb.Length > 0 && !clientStream.DataAvailable)
                         {
                             // Подождем немного, вдруг хвост пакета долетает
-                            await Task.Delay(50, _cts.Token); 
+                            await Task.Delay(_timeoutFlushMs, _cts.Token); 
                             
                             // Если всё еще нет данных
                             if (!clientStream.DataAvailable)
@@ -469,7 +471,7 @@ public class TcpScanner : IScanner
                 {
                      // Обычно ответ на триггер приходит целиком. 
                      // Если там нет \r\n, мы обязаны это обработать, иначе застрянем.
-                     await Task.Delay(50, _cts.Token);
+                     await Task.Delay(_timeoutFlushMs, _cts.Token);
                      if (!_stream.DataAvailable)
                      {
                          var content = sbClient.ToString().Trim();

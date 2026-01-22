@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch (ScanFetch)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/bin/Debug/net10.0/ScanFetch.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Launch (TestScanner)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-testscanner",
+            "program": "${workspaceFolder}/TestScanner/bin/Debug/net10.0/TestScanner.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/TestScanner",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ]
+}

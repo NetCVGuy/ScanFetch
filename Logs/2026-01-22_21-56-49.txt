@@ -1,0 +1,54 @@
+
+        __
+     __/o \_
+     \____  \
+         /   \
+   __   //\   \
+__/o \-//--\   \_/
+\____  ___  \  |
+     ||   \ |\ |
+    _||   _||_||
+
+    ScanFetch - MORGENSHTERN EDITION
+                                                 
+
+[2026-01-22 21:56:49] [Information] [Program] Запуск ScanFetch...
+[2026-01-22 22:00:14] [Information] [Program] Попытка подключения к 1 сканерам...
+[2026-01-22 22:00:14] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 127.0.0.1:2002 (таймаут 20с)...
+[2026-01-22 22:00:14] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 127.0.0.1:2002!
+[2026-01-22 22:00:14] [Information] [ScanFetch.Scanners.TcpScanner] Режим разделителя: Пользовательский [';'] (Hex: 3B)
+[2026-01-22 22:00:14] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 127.0.0.1:2002
+[2026-01-22 22:00:14] [Information] [Program] Все сканеры успешно подключены и работают.
+[2026-01-22 22:00:39] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M<CR><LF>
+[2026-01-22 22:00:39] [Information] [ScanFetch.Scanners.TcpScanner] TIMEOUT FLUSH (Client): Данные без разделителя 127.0.0.1:2002: Z3A537M
+[2026-01-22 22:00:39] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537M (Timestamp: 1769108439) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-22 22:00:44] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":3,"col":1}
+[2026-01-22 22:01:18] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537N009<CR><LF>
+[2026-01-22 22:01:19] [Information] [ScanFetch.Scanners.TcpScanner] TIMEOUT FLUSH (Client): Данные без разделителя 127.0.0.1:2002: Z3A537N009
+[2026-01-22 22:01:19] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537N009 (Timestamp: 1769108479) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-22 22:01:23] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":3,"col":1}
+[2026-01-22 22:01:52] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M007;<CR><LF>
+[2026-01-22 22:01:52] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537M007 (Timestamp: 1769108512) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-22 22:01:57] [Error] [ScanFetch.Services.GoogleSheetsWebhook] Ошибка при отправке в Google Sheets
+System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: Operation canceled.
+ ---> System.Net.Sockets.SocketException (125): Operation canceled
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](Memory`1 buffer, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.<CheckUsabilityOnScavenge>g__ReadAheadWithZeroByteReadAsync|39_0()
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at ScanFetch.Services.GoogleSheetsWebhook.SendToGoogleSheetsAsync(String code, String scannerName, String remote) in /run/media/zahar/moding/VSPRJ/ScanFetch/Services/GoogleSheetsWebhook.cs:line 180

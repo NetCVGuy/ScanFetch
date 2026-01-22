@@ -1,0 +1,21 @@
+
+        __
+     __/o \_
+     \____  \
+         /   \
+   __   //\   \
+__/o \-//--\   \_/
+\____  ___  \  |
+     ||   \ |\ |
+    _||   _||_||
+
+    ScanFetch - MORGENSHTERN EDITION
+                                                 
+
+[2026-01-22 23:00:50] [Information] [Program] Запуск ScanFetch...
+[2026-01-22 23:00:56] [Information] [Program] Попытка подключения к 1 сканерам...
+[2026-01-22 23:00:56] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 127.0.0.1:2002 (таймаут 20с)...
+[2026-01-22 23:00:56] [Warning] [ScanFetch.Scanners.TcpScanner] Ошибка подключения к 127.0.0.1:2002: Connection refused
+[2026-01-22 23:00:56] [Error] [Program] Режим CancelOnAny включен. Прерываем подключение.
+[2026-01-22 23:00:56] [Information] [ScanFetch.Scanners.TcpScanner] Отключено от сканера 127.0.0.1:2002
+[2026-01-22 23:00:56] [Error] [Program] Ошибка подключения одного из сканеров. Повтор через 5с...

@@ -1,0 +1,24 @@
+
+        __
+     __/o \_
+     \____  \
+         /   \
+   __   //\   \
+__/o \-//--\   \_/
+\____  ___  \  |
+     ||   \ |\ |
+    _||   _||_||
+
+    ScanFetch - MORGENSHTERN EDITION
+                                                 
+
+[2026-01-22 22:56:16] [Information] [Program] Запуск ScanFetch...
+[2026-01-22 22:56:20] [Information] [Program] Попытка подключения к 1 сканерам...
+[2026-01-22 22:56:20] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 127.0.0.1:2002 (таймаут 20с)...
+[2026-01-22 22:56:20] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 127.0.0.1:2002!
+[2026-01-22 22:56:20] [Information] [ScanFetch.Scanners.TcpScanner] Режим разделителя: Автоматический (CR/LF)
+[2026-01-22 22:56:20] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 127.0.0.1:2002
+[2026-01-22 22:56:20] [Information] [Program] Все сканеры успешно подключены и работают.
+[2026-01-22 22:56:43] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: 123456<CR><LF>
+[2026-01-22 22:56:43] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: 123456 (Timestamp: 1769111803) (Scanner: DebugScanner, Remote: [::ffff:127.0.0.1]:2002)
+[2026-01-22 22:56:46] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: {"result":"success","row":18,"col":1,"code":"123456","foundMatch":false,"message":"123456"}

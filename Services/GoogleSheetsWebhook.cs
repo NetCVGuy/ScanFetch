@@ -47,7 +47,10 @@ public class GoogleSheetsWebhook
         _enableFileOutput = enableFileOutput;
         _enableGoogleSheets = enableGoogleSheets;
         _logger = logger ?? NullLogger<GoogleSheetsWebhook>.Instance;
-        _httpClient = new HttpClient();
+        _httpClient = new HttpClient
+        {
+            Timeout = TimeSpan.FromSeconds(35) // Google Apps Script lock timeout is 30s
+        };
     }
 
     /// <summary>
@@ -169,22 +172,35 @@ public class GoogleSheetsWebhook
         _logger.LogInformation("Скан: {Code} (Timestamp: {Timestamp}) (Scanner: {Scanner}, Remote: {Remote})", code, DateTimeOffset.Now.ToUnixTimeSeconds(), scannerName, remote);
         var payload = new { code = code, scanner = scannerName, remote = remote };
 
-        try
+        const int maxRetries = 2;
+        for (int attempt = 0; attempt < maxRetries; attempt++)
         {
-            var jsonContent = new StringContent(
-                JsonSerializer.Serialize(payload), 
-                Encoding.UTF8, 
-                "application/json");
+            try
+            {
+                var jsonContent = new StringContent(
+                    JsonSerializer.Serialize(payload), 
+                    Encoding.UTF8, 
+                    "application/json");
 
-            var cts = new CancellationTokenSource(TimeSpan.FromSeconds(5));
-            var response = await _httpClient.PostAsync(_webhookUrl, jsonContent, cts.Token);
-            var responseText = await response.Content.ReadAsStringAsync();
+                var cts = new CancellationTokenSource(TimeSpan.FromSeconds(35)); // Match Google Apps Script lock timeout
+                var response = await _httpClient.PostAsync(_webhookUrl, jsonContent, cts.Token);
+                var responseText = await response.Content.ReadAsStringAsync();
 
-            _logger.LogInformation("Ответ от Google Таблицы: {Response}", responseText);
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Ошибка при отправке в Google Sheets");
+                _logger.LogInformation("Ответ от Google Таблицы: {Response}", responseText);
+                return; // Success - exit retry loop
+            }
+            catch (TaskCanceledException) when (attempt < maxRetries - 1)
+            {
+                _logger.LogWarning("Timeout при отправке в Google Sheets (попытка {Attempt}/{Max}). Повтор через 2с...", attempt + 1, maxRetries);
+                await Task.Delay(2000);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Ошибка при отправке в Google Sheets (попытка {Attempt}/{Max})", attempt + 1, maxRetries);
+                if (attempt >= maxRetries - 1)
+                    break;
+                await Task.Delay(1000);
+            }
         }
     }
 

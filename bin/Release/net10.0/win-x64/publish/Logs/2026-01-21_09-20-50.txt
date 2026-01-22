@@ -1,215 +1,0 @@
-
-        __
-     __/o \_
-     \____  \
-         /   \
-   __   //\   \
-__/o \-//--\   \_/
-\____  ___  \  |
-     ||   \ |\ |
-    _||   _||_||
-
-    ScanFetch - MORGENSHTERN EDITION
-                                                 
-
-[2026-01-21 09:20:50] [Information] [Program] Запуск ScanFetch...
-[2026-01-21 09:20:50] [Information] [Program] Попытка подключения к 2 сканерам...
-[2026-01-21 09:20:50] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.0.10:2002 (таймаут 20с)...
-[2026-01-21 09:20:50] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 192.168.0.10:2002!
-[2026-01-21 09:20:50] [Information] [ScanFetch.Scanners.TcpScanner] Режим разделителя: Пользовательский ['<CR><LF>'] (Hex: 0D-0A)
-[2026-01-21 09:20:50] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 192.168.0.10:2002
-[2026-01-21 09:20:50] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.0.9:2002 (таймаут 20с)...
-[2026-01-21 09:20:50] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 192.168.0.9:2002!
-[2026-01-21 09:20:50] [Information] [ScanFetch.Scanners.TcpScanner] Режим разделителя: Пользовательский ['<CR><LF>'] (Hex: 0D-0A)
-[2026-01-21 09:20:50] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 192.168.0.9:2002
-[2026-01-21 09:20:50] [Information] [Program] Все сканеры успешно подключены и работают.
-[2026-01-21 09:20:54] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:20:55] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:16] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:16] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:16] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:16] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:16] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:16] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:16] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:16] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:16] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>B4042962984E<CR><LF>
-[2026-01-21 09:21:17] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:17] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:17] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:17] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:17] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:17] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:17] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:17] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:17] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:18] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>B4042962984E<CR><LF>
-[2026-01-21 09:21:18] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:18] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:18] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:18] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:18] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:18] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:18] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:18] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>B4042962984E<CR><LF>
-[2026-01-21 09:21:19] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:19] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:19] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:19] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:19] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:19] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:19] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:19] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:19] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:19] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>B4042962984E<CR><LF>
-[2026-01-21 09:21:20] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:20] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:20] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:20] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:20] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:20] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:20] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:20] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>B4042962984E<CR><LF>
-[2026-01-21 09:21:21] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:21] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:21] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:21] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:21] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:21] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:21] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:21] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:21] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>B4042962984E<CR><LF>
-[2026-01-21 09:21:22] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:22] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:22] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:22] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:22] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:22] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:22] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:22] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>B4042962984E<CR><LF>
-[2026-01-21 09:21:22] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:23] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:23] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:23] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:23] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:23] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:23] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:23] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:23] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>B4042962984E<CR><LF>
-[2026-01-21 09:21:23] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:24] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:24] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:24] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:24] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:24] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:24] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:24] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:24] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:24] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>B4042962984E<CR><LF>
-[2026-01-21 09:21:25] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:25] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:25] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:25] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:25] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:25] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:25] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:25] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:25] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:26] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>B4042962984E<CR><LF>
-[2026-01-21 09:21:26] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:26] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:26] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:26] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:26] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:26] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:26] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:26] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:26] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:27] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>B4042962984E<CR><LF>
-[2026-01-21 09:21:27] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:27] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:27] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:27] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:27] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:27] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:27] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:27] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:28] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:28] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>B4042962984E<CR><LF>
-[2026-01-21 09:21:28] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:28] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:28] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:21:28] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: B4042962984E<CR><LF>
-[2026-01-21 09:22:13] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060720<CR><LF>
-[2026-01-21 09:22:13] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537M060720 (Timestamp: 1768976533) (Scanner: MainScanner, Remote: [::ffff:192.168.0.10]:2002)
-[2026-01-21 09:22:14] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:14] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060720<CR><LF>
-[2026-01-21 09:22:14] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:14] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060720<CR><LF>
-[2026-01-21 09:22:14] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:14] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060720<CR><LF>
-[2026-01-21 09:22:14] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:14] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060720<CR><LF>
-[2026-01-21 09:22:14] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:14] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060720<CR><LF>
-[2026-01-21 09:22:14] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:14] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060720<CR><LF>
-[2026-01-21 09:22:14] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:14] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060720<CR><LF>
-[2026-01-21 09:22:14] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:14] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060720<CR><LF>
-[2026-01-21 09:22:14] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:15] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060720<CR><LF>
-[2026-01-21 09:22:15] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:15] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060720<CR><LF>
-[2026-01-21 09:22:15] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:15] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>Z3A537M060730<CR><LF>
-[2026-01-21 09:22:15] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:15] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:15] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:15] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:15] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:15] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:16] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:16] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:16] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:16] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:16] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:16] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z3A537M060730<CR><LF>
-[2026-01-21 09:22:16] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: OK
-[2026-01-21 09:22:16] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z3A537M060730 (Timestamp: 1768976536) (Scanner: SubScanner, Remote: [::ffff:192.168.0.9]:2002)
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: OK
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 6.9с назад): Z3A537M060720
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 6.9с назад): Z3A537M060720
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 7.0с назад): Z3A537M060720
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 7.0с назад): Z3A537M060720
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 7.0с назад): Z3A537M060720
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 7.0с назад): Z3A537M060720
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 7.0с назад): Z3A537M060720
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 7.0с назад): Z3A537M060720
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 7.0с назад): Z3A537M060720
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 7.0с назад): Z3A537M060720
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730
-[2026-01-21 09:22:20] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 4.1с назад): Z3A537M060730

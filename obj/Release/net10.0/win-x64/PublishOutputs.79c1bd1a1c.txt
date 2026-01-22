@@ -1,0 +1,3 @@
+/run/media/zahar/moding/VSPRJ/ScanFetch/publish/win-x64/ScanFetch.pdb
+/run/media/zahar/moding/VSPRJ/ScanFetch/publish/win-x64/appsettings.json
+/run/media/zahar/moding/VSPRJ/ScanFetch/publish/win-x64/ScanFetch.exe

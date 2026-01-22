@@ -121,6 +121,47 @@ while (true)
     {
         // Создаём сканеры из конфигурации
         var scannerList = appSettings?.Scanners ?? Enumerable.Empty<ScannerSettings>();
+        
+        // Debug mode: interactive configuration
+        if (systemSettings.DebugMode)
+        {
+            AnsiConsole.MarkupLine("[yellow]═══ РЕЖИМ ОТЛАДКИ ВКЛЮЧЕН ═══[/]");
+            var debugMode = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                    .Title("[cyan]Выберите режим работы:[/]")
+                    .AddChoices("Client - подключиться к сканеру", "Server - ждать подключения от сканера", "Использовать конфигурацию из appsettings.json")
+            );
+
+            if (debugMode != "Использовать конфигурацию из appsettings.json")
+            {
+                var role = debugMode.StartsWith("Client") ? "Client" : "Server";
+                var ip = role == "Client" 
+                    ? AnsiConsole.Ask<string>("[cyan]Введите IP адрес сканера:[/]", "127.0.0.1")
+                    : AnsiConsole.Ask<string>("[cyan]Введите IP для прослушивания (пусто = все интерфейсы):[/]", "");
+                var port = AnsiConsole.Ask<int>("[cyan]Введите порт:[/]", 2002);
+                var delimiter = AnsiConsole.Ask<string>("[cyan]Разделитель (пусто = авто CR/LF):[/]", "");
+                var timeoutFlush = AnsiConsole.Ask<int>("[cyan]Таймаут очистки буфера (мс):[/]", 50);
+                var requestInterval = AnsiConsole.Ask<int>("[cyan]Интервал запросов для Client (мс):[/]", 100);
+
+                // Override scanner list with debug config
+                scannerList = new List<ScannerSettings>
+                {
+                    new ScannerSettings
+                    {
+                        Name = "DebugScanner",
+                        Ip = ip,
+                        Port = port,
+                        Role = role,
+                        Enabled = true,
+                        Delimiter = delimiter,
+                        TimeoutFlushMs = timeoutFlush,
+                        RequestIntervalMs = requestInterval
+                    }
+                };
+            }
+            AnsiConsole.MarkupLine("[green]═══ ЗАПУСК С ВЫБРАННЫМИ ПАРАМЕТРАМИ ═══[/]");
+        }
+        
         foreach (var scannerConfig in scannerList)
         {
             if (scannerConfig is null || !scannerConfig.Enabled) continue;
@@ -133,7 +174,8 @@ while (true)
                 cfg.ListenInterface,
                 cfg.Delimiter,
                 cfg.StartsWithFilter,
-                cfg.RequestIntervalMs
+                cfg.RequestIntervalMs,
+                cfg.TimeoutFlushMs
             );
 
             // Подписываемся на события
@@ -197,15 +239,31 @@ while (true)
             // Отключаем те, что успели подключиться
             foreach (var scanner in scanners) await scanner.DisconnectAsync();
             
-            logger.LogError("Ошибка подключения одного из сканеров. Нажмите Enter для повтора...");
-            Console.ReadLine();
+            if (systemSettings.AutoRetryEnabled)
+            {
+                logger.LogError("Ошибка подключения одного из сканеров. Повтор через {Delay}с...", systemSettings.RetryDelaySeconds);
+                await Task.Delay(systemSettings.RetryDelaySeconds * 1000);
+            }
+            else
+            {
+                logger.LogError("Ошибка подключения одного из сканеров. Нажмите Enter для повтора...");
+                Console.ReadLine();
+            }
             continue; // Повторяем цикл while(true)
         }
 
         if (!systemSettings.CancelOnAny && successfulClientConnections == 0 && listenersStarted == 0)
         {
-             logger.LogError("Не удалось подключиться ни к одному сканеру и не запущено ни одного сервера. Нажмите Enter для повтора...");
-             Console.ReadLine();
+            if (systemSettings.AutoRetryEnabled)
+            {
+                logger.LogError("Не удалось подключиться ни к одному сканеру и не запущено ни одного сервера. Повтор через {Delay}с...", systemSettings.RetryDelaySeconds);
+                await Task.Delay(systemSettings.RetryDelaySeconds * 1000);
+            }
+            else
+            {
+                logger.LogError("Не удалось подключиться ни к одному сканеру и не запущено ни одного сервера. Нажмите Enter для повтора...");
+                Console.ReadLine();
+            }
              continue;
         }
 
@@ -235,14 +293,22 @@ while (true)
         
         // Если задачи завершились (соединения разорваны), выходим из цикла или перезапускаем?
         // Скорее всего, если они завершились, значит соединение потеряно.
-        logger.LogWarning("Соединения со сканерами потеряны. Перезапуск через 5 сек...");
-        await Task.Delay(5000);
+        logger.LogWarning("Соединения со сканерами потеряны. Перезапуск через {Delay}с...", systemSettings.RetryDelaySeconds);
+        await Task.Delay(systemSettings.RetryDelaySeconds * 1000);
     }
     catch (Exception ex)
     {
         logger.LogError(ex, "Критическая ошибка в главном цикле");
-        logger.LogInformation("Нажмите Enter для перезапуска...");
-        Console.ReadLine();
+        if (systemSettings.AutoRetryEnabled)
+        {
+            logger.LogInformation("Перезапуск через {Delay}с...", systemSettings.RetryDelaySeconds);
+            await Task.Delay(systemSettings.RetryDelaySeconds * 1000);
+        }
+        else
+        {
+            logger.LogInformation("Нажмите Enter для перезапуска...");
+            Console.ReadLine();
+        }
     }
     finally
     {

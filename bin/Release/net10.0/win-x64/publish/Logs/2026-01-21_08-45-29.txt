@@ -1,54 +1,0 @@
-
-        __
-     __/o \_
-     \____  \
-         /   \
-   __   //\   \
-__/o \-//--\   \_/
-\____  ___  \  |
-     ||   \ |\ |
-    _||   _||_||
-
-    ScanFetch - MORGENSHTERN EDITION
-                                                 
-
-[2026-01-21 08:45:30] [Information] [Program] Запуск ScanFetch...
-[2026-01-21 08:45:30] [Information] [Program] Попытка подключения к 2 сканерам...
-[2026-01-21 08:45:30] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.0.10:2002 (таймаут 20с)...
-[2026-01-21 08:45:30] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 192.168.0.10:2002!
-[2026-01-21 08:45:30] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 192.168.0.10:2002
-[2026-01-21 08:45:30] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.0.9:2002 (таймаут 20с)...
-[2026-01-21 08:45:30] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 192.168.0.9:2002!
-[2026-01-21 08:45:30] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 192.168.0.9:2002
-[2026-01-21 08:45:30] [Information] [Program] Все сканеры успешно подключены и работают.
-[2026-01-21 08:45:35] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK090930<CR><LF>
-[2026-01-21 08:45:35] [Information] [ScanFetch.Scanners.TcpScanner] TIMEOUT FLUSH (Client): Данные без разделителя 192.168.0.10:2002: Z2A42BK090930
-[2026-01-21 08:45:35] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z2A42BK090930 (Timestamp: 1768974335) (Scanner: MainScanner, Remote: [::ffff:192.168.0.10]:2002)
-[2026-01-21 08:45:35] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK090930<CR><LF>Z2A42BK090930<CR><LF>
-[2026-01-21 08:45:35] [Information] [ScanFetch.Scanners.TcpScanner] TIMEOUT FLUSH (Client): Данные без разделителя 192.168.0.10:2002: Z2A42BK090930
-Z2A42BK090930
-[2026-01-21 08:45:35] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK090930<CR><LF>Z2A42BK090930<CR><LF>
-[2026-01-21 08:45:35] [Information] [ScanFetch.Scanners.TcpScanner] TIMEOUT FLUSH (Client): Данные без разделителя 192.168.0.10:2002: Z2A42BK090930
-Z2A42BK090930
-[2026-01-21 08:45:35] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK090930<CR><LF>
-[2026-01-21 08:45:35] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK090930<CR><LF>Z2A42BK090930<CR><LF>Z2A42BK090930<CR><LF>
-[2026-01-21 08:45:36] [Information] [ScanFetch.Scanners.TcpScanner] TIMEOUT FLUSH (Client): Данные без разделителя 192.168.0.10:2002: Z2A42BK090930
-Z2A42BK090930
-Z2A42BK090930
-[2026-01-21 08:45:38] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: OK
-[2026-01-21 08:45:38] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z2A42BK090930
-Z2A42BK090930 (Timestamp: 1768974338) (Scanner: MainScanner, Remote: [::ffff:192.168.0.10]:2002)
-[2026-01-21 08:45:41] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: OK
-[2026-01-21 08:45:41] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.0с назад): Z2A42BK090930
-Z2A42BK090930
-[2026-01-21 08:45:41] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z2A42BK090930
-Z2A42BK090930
-Z2A42BK090930 (Timestamp: 1768974341) (Scanner: MainScanner, Remote: [::ffff:192.168.0.10]:2002)
-[2026-01-21 08:45:44] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: OK
-[2026-01-21 08:46:56] [Warning] [ScanFetch.Scanners.TcpScanner] Ошибка при прослушивании сканера 192.168.0.10:2002
-System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
- ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
-   --- End of inner exception stack trace ---
-   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
-   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
-   at ScanFetch.Scanners.TcpScanner.StartListeningAsync() in D:\ПРОЕКТЫ\VSPRJ\ScanFetch\Scanners\TcpScanner.cs:line 336

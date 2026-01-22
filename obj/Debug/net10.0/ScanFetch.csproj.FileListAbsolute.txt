@@ -1,71 +1,34 @@
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/appsettings.json
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/ScanFetch
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/ScanFetch.deps.json
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/ScanFetch.runtimeconfig.json
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/ScanFetch.dll
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/ScanFetch.pdb
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/Microsoft.Extensions.Configuration.dll
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/Microsoft.Extensions.Configuration.Abstractions.dll
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/Microsoft.Extensions.Configuration.Binder.dll
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/Microsoft.Extensions.Configuration.FileExtensions.dll
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/Microsoft.Extensions.Configuration.Json.dll
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/Microsoft.Extensions.DependencyInjection.dll
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/Microsoft.Extensions.FileProviders.Abstractions.dll
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/Microsoft.Extensions.FileProviders.Physical.dll
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/Microsoft.Extensions.FileSystemGlobbing.dll
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/Microsoft.Extensions.Logging.dll
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/Microsoft.Extensions.Logging.Abstractions.dll
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/Microsoft.Extensions.Logging.Configuration.dll
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/Microsoft.Extensions.Logging.Console.dll
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/Microsoft.Extensions.Options.dll
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/Microsoft.Extensions.Primitives.dll
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/bin/Debug/net10.0/Spectre.Console.dll
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/obj/Debug/net10.0/ScanFetch.csproj.AssemblyReference.cache
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/obj/Debug/net10.0/ScanFetch.GeneratedMSBuildEditorConfig.editorconfig
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/obj/Debug/net10.0/ScanFetch.AssemblyInfoInputs.cache
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/obj/Debug/net10.0/ScanFetch.AssemblyInfo.cs
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/obj/Debug/net10.0/ScanFetch.csproj.CoreCompileInputs.cache
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/obj/Debug/net10.0/ScanFetch.csproj.Up2Date
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/obj/Debug/net10.0/ScanFetch.dll
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/obj/Debug/net10.0/refint/ScanFetch.dll
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/obj/Debug/net10.0/ScanFetch.pdb
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/obj/Debug/net10.0/ScanFetch.genruntimeconfig.cache
-/home/zahar/Загрузки/AyuGram Desktop/Scanfetch_MORGENSHTERN/obj/Debug/net10.0/ref/ScanFetch.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\appsettings.json
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\ScanFetch.exe
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\ScanFetch.deps.json
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\ScanFetch.runtimeconfig.json
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\ScanFetch.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\ScanFetch.pdb
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Configuration.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Configuration.Abstractions.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Configuration.Binder.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Configuration.FileExtensions.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Configuration.Json.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.FileProviders.Abstractions.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.FileProviders.Physical.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.FileSystemGlobbing.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Logging.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Logging.Abstractions.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Logging.Configuration.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Logging.Console.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Options.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Microsoft.Extensions.Primitives.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Debug\net10.0\Spectre.Console.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ScanFetch.csproj.AssemblyReference.cache
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ScanFetch.GeneratedMSBuildEditorConfig.editorconfig
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ScanFetch.AssemblyInfoInputs.cache
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ScanFetch.AssemblyInfo.cs
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ScanFetch.csproj.CoreCompileInputs.cache
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ScanFetch.sourcelink.json
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ScanFetch.csproj.Up2Date
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ScanFetch.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\refint\ScanFetch.dll
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ScanFetch.pdb
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ScanFetch.genruntimeconfig.cache
-d:\ПРОЕКТЫ\VSPRJ\ScanFetch\obj\Debug\net10.0\ref\ScanFetch.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/appsettings.json
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/ScanFetch
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/ScanFetch.deps.json
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/ScanFetch.runtimeconfig.json
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/ScanFetch.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/ScanFetch.pdb
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/Microsoft.Extensions.Configuration.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/Microsoft.Extensions.Configuration.Binder.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/Microsoft.Extensions.Configuration.Json.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/Microsoft.Extensions.DependencyInjection.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/Microsoft.Extensions.FileProviders.Physical.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/Microsoft.Extensions.Logging.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/Microsoft.Extensions.Logging.Abstractions.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/Microsoft.Extensions.Logging.Configuration.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/Microsoft.Extensions.Logging.Console.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/Microsoft.Extensions.Options.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/Microsoft.Extensions.Primitives.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/bin/Debug/net10.0/Spectre.Console.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/obj/Debug/net10.0/ScanFetch.csproj.AssemblyReference.cache
+/run/media/zahar/moding/VSPRJ/ScanFetch/obj/Debug/net10.0/ScanFetch.GeneratedMSBuildEditorConfig.editorconfig
+/run/media/zahar/moding/VSPRJ/ScanFetch/obj/Debug/net10.0/ScanFetch.csproj.CoreCompileInputs.cache
+/run/media/zahar/moding/VSPRJ/ScanFetch/obj/Debug/net10.0/ScanFetch.sourcelink.json
+/run/media/zahar/moding/VSPRJ/ScanFetch/obj/Debug/net10.0/ScanFetch.csproj.Up2Date
+/run/media/zahar/moding/VSPRJ/ScanFetch/obj/Debug/net10.0/ScanFetch.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/obj/Debug/net10.0/refint/ScanFetch.dll
+/run/media/zahar/moding/VSPRJ/ScanFetch/obj/Debug/net10.0/ScanFetch.pdb
+/run/media/zahar/moding/VSPRJ/ScanFetch/obj/Debug/net10.0/ScanFetch.genruntimeconfig.cache
+/run/media/zahar/moding/VSPRJ/ScanFetch/obj/Debug/net10.0/ref/ScanFetch.dll

@@ -1,41 +1,0 @@
-
-        __
-     __/o \_
-     \____  \
-         /   \
-   __   //\   \
-__/o \-//--\   \_/
-\____  ___  \  |
-     ||   \ |\ |
-    _||   _||_||
-
-    ScanFetch - MORGENSHTERN EDITION
-                                                 
-
-[2026-01-21 08:54:57] [Information] [Program] Запуск ScanFetch...
-[2026-01-21 08:54:57] [Information] [Program] Попытка подключения к 2 сканерам...
-[2026-01-21 08:54:57] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.0.10:2002 (таймаут 20с)...
-[2026-01-21 08:54:57] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 192.168.0.10:2002!
-[2026-01-21 08:54:57] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 192.168.0.10:2002
-[2026-01-21 08:54:57] [Information] [ScanFetch.Scanners.TcpScanner] Подключаюсь к 192.168.0.9:2002 (таймаут 20с)...
-[2026-01-21 08:54:57] [Information] [ScanFetch.Scanners.TcpScanner] Подключено к сканеру 192.168.0.9:2002!
-[2026-01-21 08:54:57] [Information] [ScanFetch.Scanners.TcpScanner] Запущено прослушивание в режиме клиента 192.168.0.9:2002
-[2026-01-21 08:54:57] [Information] [Program] Все сканеры успешно подключены и работают.
-[2026-01-21 08:55:15] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK090930<CR><LF>
-[2026-01-21 08:55:15] [Information] [ScanFetch.Scanners.TcpScanner] TIMEOUT FLUSH (Client): Данные без разделителя 192.168.0.10:2002: Z2A42BK090930
-[2026-01-21 08:55:15] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z2A42BK090930 (Timestamp: 1768974915) (Scanner: MainScanner, Remote: [::ffff:192.168.0.10]:2002)
-[2026-01-21 08:55:16] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK090930<CR><LF>Z2A42BK090930<CR><LF>
-[2026-01-21 08:55:16] [Information] [ScanFetch.Scanners.TcpScanner] TIMEOUT FLUSH (Client): Данные без разделителя 192.168.0.10:2002: Z2A42BK090930
-Z2A42BK090930
-[2026-01-21 08:55:16] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK090930<CR><LF>Z2A42BK090930<CR><LF>
-[2026-01-21 08:55:16] [Information] [ScanFetch.Scanners.TcpScanner] TIMEOUT FLUSH (Client): Данные без разделителя 192.168.0.10:2002: Z2A42BK090930
-Z2A42BK090930
-[2026-01-21 08:55:16] [Information] [ScanFetch.Scanners.TcpScanner] [RAW Client] Буфер: Z2A42BK090930<CR><LF>
-[2026-01-21 08:55:16] [Information] [ScanFetch.Scanners.TcpScanner] TIMEOUT FLUSH (Client): Данные без разделителя 192.168.0.10:2002: Z2A42BK090930
-[2026-01-21 08:55:18] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: OK
-[2026-01-21 08:55:18] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Скан: Z2A42BK090930
-Z2A42BK090930 (Timestamp: 1768974918) (Scanner: MainScanner, Remote: [::ffff:192.168.0.10]:2002)
-[2026-01-21 08:55:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Ответ от Google Таблицы: OK
-[2026-01-21 08:55:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 3.3с назад): Z2A42BK090930
-Z2A42BK090930
-[2026-01-21 08:55:22] [Information] [ScanFetch.Services.GoogleSheetsWebhook] Дубликат (игнорируется, 6.2с назад): Z2A42BK090930

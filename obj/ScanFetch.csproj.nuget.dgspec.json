@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ПРОЕКТЫ\\VSPRJ\\ScanFetch\\ScanFetch.csproj": {}
+    "/run/media/zahar/moding/VSPRJ/ScanFetch/ScanFetch.csproj": {}
   },
   "projects": {
-    "D:\\ПРОЕКТЫ\\VSPRJ\\ScanFetch\\ScanFetch.csproj": {
+    "/run/media/zahar/moding/VSPRJ/ScanFetch/ScanFetch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ПРОЕКТЫ\\VSPRJ\\ScanFetch\\ScanFetch.csproj",
+        "projectUniqueName": "/run/media/zahar/moding/VSPRJ/ScanFetch/ScanFetch.csproj",
         "projectName": "ScanFetch",
-        "projectPath": "D:\\ПРОЕКТЫ\\VSPRJ\\ScanFetch\\ScanFetch.csproj",
-        "packagesPath": "C:\\Users\\local\\.nuget\\packages\\",
-        "outputPath": "D:\\ПРОЕКТЫ\\VSPRJ\\ScanFetch\\obj\\",
+        "projectPath": "/run/media/zahar/moding/VSPRJ/ScanFetch/ScanFetch.csproj",
+        "packagesPath": "/home/zahar/.nuget/packages/",
+        "outputPath": "/run/media/zahar/moding/VSPRJ/ScanFetch/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\local\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/zahar/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -81,7 +75,7 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[10.0.1, )",
+              "version": "[10.0.2, )",
               "autoReferenced": true
             },
             "Spectre.Console": {
@@ -103,15 +97,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[10.0.1, 10.0.1]"
+              "version": "[10.0.2, 10.0.2]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[10.0.2, 10.0.2]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[10.0.1, 10.0.1]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-              "version": "[10.0.1, 10.0.1]"
+              "version": "[10.0.2, 10.0.2]"
             }
           ],
           "frameworkReferences": {
@@ -119,7 +113,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/home/zahar/.dotnet/sdk/10.0.102/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

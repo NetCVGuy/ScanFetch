@@ -1,3 +1,0 @@
-D:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Release4\net10.0\win-x64\publish\ScanFetch.pdb
-D:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Release4\net10.0\win-x64\publish\appsettings.json
-D:\ПРОЕКТЫ\VSPRJ\ScanFetch\bin\Release4\net10.0\win-x64\publish\ScanFetch.exe

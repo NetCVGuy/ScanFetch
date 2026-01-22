@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ScanFetch Monitor</string>
+    <string name="server_ip_label">ScanFetch Server IP</string>
+    <string name="server_ip_hint">192.168.1.100</string>
+    <string name="server_port_label">Port</string>
+    <string name="server_port_hint">5000</string>
+    <string name="connect_button">Connect</string>
+    <string name="disconnect_button">Disconnect</string>
+    <string name="status_disconnected">Disconnected</string>
+    <string name="status_connecting">Connecting…</string>
+    <string name="status_connected">Connected</string>
+    <string name="status_error">Error</string>
+    <string name="scanners_title">Scanners Status</string>
+    <string name="events_title">Recent Events</string>
+    <string name="no_events">No events yet</string>
+    <string name="notification_channel_name">Scanner Alerts</string>
+    <string name="notification_channel_desc">Notifications for scanner errors and disconnections</string>
+    <string name="service_notification_title">ScanFetch Monitor</string>
+    <string name="service_notification_text">Monitoring scanners…</string>
+</resources>
